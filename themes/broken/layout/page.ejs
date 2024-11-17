@@ -1,0 +1,37 @@
+
+    <!-- 文章列表展示部分 -->
+    <div class="container">
+      <% if (paginator.posts && paginator.posts.length > 0) { %>
+          <% paginator.posts.forEach(function(post) { %>
+              <div class="card mb-3">
+                  <div class="card-body">
+                      <h5 class="card-title"><%= post.title %></h5>
+                      <h6 class="card-subtitle mb-2 text-muted">发布时间：<%- date(post.date, "YYYY-MM-DD HH:mm:ss") %></h6>
+                      <p class="card-text"><%= post.excerpt %></p> <!-- 文章摘要，可根据实际情况修改获取方式 -->
+                      <a href="/<%- post.path %>" class="btn btn-primary">阅读全文</a>
+                  </div>
+              </div>
+          <% }); %>
+      <% } %>
+  </div>
+
+  <!-- 分页部分 -->
+  <div class="pagination justify-content-center mt-4">
+      <% if (paginator.prev) { %>
+          <a href="<%= paginator.prev_link %>" class="page-link"><%= paginator.prev_text || '<' %></a>
+      <% } %>
+
+      <% for (var i = Math.max(paginator.current - 2, 1); i <= Math.min(paginator.current + 2, paginator.total_pages); i++) { %>
+          <% if (i === paginator.current) { %>
+              <span class="page-item active">
+                  <a href="#" class="page-link"><%= i %></a>
+              </span>
+          <% } else { %>
+              <a href="<%= paginator.path.replace(/page\/\d+/, 'page/' + i) %>" class="page-link"><%= i %></a>
+          <% } %>
+      <% } %>
+
+      <% if (paginator.next) { %>
+          <a href="<%= paginator.next_link %>" class="page-link"><%= paginator.next_text || '>' %></a>
+      <% } %>
+  </div>

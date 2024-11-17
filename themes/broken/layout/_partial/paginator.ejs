@@ -1,0 +1,9 @@
+<% if (page.total > 1) { %>
+    <div class="pagination-wrapper"> <!-- 可以添加一个外层容器方便整体样式控制，你也可以选择不加 -->
+        <%- paginator({
+            prev_text: "" + __('上一页'),
+            next_text: __('下一页') + ""
+          }) %>
+        </div>
+
+<% } %>

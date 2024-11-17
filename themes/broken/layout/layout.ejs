@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <%
+    var title = page.title;
+  
+    if (is_archive()){
+      title = __('archives');
+  
+      if (is_month()){
+        title += '：' + page.year + '/' + page.month;
+      } else if (is_year()){
+        title += '：' + page.year;
+      }
+    } else if (is_category()){
+      title = __('分类') + '：' + page.category;
+    } else if (is_tag()){
+      if (theme.hashtag_prefix_before_tags) {
+        title = '#' + page.tag;
+      } else {
+        title = __('标签') + '：' + page.tag;
+      }
+    } else if (theme.search == true && page.type == 'search') {
+      title = __('搜索')
+    } else if (page.type == 'tags') {
+      title = __('标签');
+    } else if (page.type == 'categories') {
+      title = __('分类');
+    }
+    %>
+    <title><% if (title){ %><%= title %> - <% } %><%= config.title %></title>
+    <%- css('css/bootstrap.min.css') %>
+  <%- css('css/style.css') %>
+  <link rel="icon" href="https://static.turboflint.cn/image/∅.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.net/animate.css/4.1.1/animate.min.css">
+
+</head>
+
+
+<body>
+  <%- include('nav.ejs') %>
+  <div class="main-content">
+    <%- body %>
+  </div>
+
+  <%- include('footer.ejs') %>
+  <%- js('js/popper.min.js') %>
+  <%- js('js/bootstrap.min.js') %>
+
+  </body>
+
+</html>

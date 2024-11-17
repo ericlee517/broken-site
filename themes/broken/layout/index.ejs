@@ -1,0 +1,116 @@
+<div class="container-fluid video-bg">
+    <div class="video-mask"></div>
+    <video autoplay muted loop playsinline>
+        <source src="videos/broken-1080p.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="text-overlay">
+        <h1 class="animate__animated animate__fadeInUp" style="font-size: 3rem">∅<br>虚无之下 皆为毁灭</h1>
+        <p  class="animate__animated animate__fadeInUp">欢迎来到破碎<br>以及<br>欢迎来到虚无<br>↓</p>
+            
+    </div>
+</div>
+
+<div class="container main-content">
+  <h2 id="all" class="mt-3">所有内容</h2>
+  <div class="card mb-4 mt-4">
+    <div class="card-header">
+      衍生小说
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">破碎宇宙衍生小说</h5>
+      <p class="card-text">根据破碎宇宙所衍生出的小说，在每一个故事中感受来自破碎的魅力。</p>
+      <a href="#" class="btn btn-primary">立即阅读</a>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-header">
+      世界观
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">破碎宇宙世界观内容</h5>
+      <p class="card-text">破碎宇宙的所有世界观内容，分析其中的小细节和小故事。</p>
+      <a href="#" class="btn btn-primary">立即阅读</a>
+    </div>
+  </div>
+  <br>
+
+  <h2 id="news" class="mt-4">所有文章</h2>
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <% site.categories.data.forEach(function(category, index) { %>
+      <li class="nav-item" role="presentation">
+          <% if (index === 0) { %>
+          <button class="nav-link active" id="pills-<%- category.name %>-tab" data-bs-toggle="pill" data-bs-target="#pills-<%- category.name %>"
+              type="button" role="tab" aria-controls="pills-<%- category.name %>" aria-selected="true"><%- category.name %></button>
+          <% } else { %>
+          <button class="nav-link" id="pills-<%- category.name %>-tab" data-bs-toggle="pill" data-bs-target="#pills-<%- category.name %>"
+              type="button" role="tab" aria-controls="pills-<%- category.name %>" aria-selected="false"><%- category.name %></button>
+          <% } %>
+      </li>
+      <% }); %>
+  </ul>
+  
+  <div class="tab-content contaniner" id="pills-tabContent">
+      <% site.categories.data.forEach(function(category, index) { %>
+      <div class="tab-pane fade<% if (index === 0) { %> show active<% } %>" id="pills-<%- category.name %>" role="tabpanel" aria-labelledby="pills-<%- category.name %>-tab"
+          tabindex="0">
+          <div class="row container">
+              <%
+              // 创建一个数组来存储当前分类的文章
+              var categoryPosts = [];
+              site.posts.forEach(function(post) {
+                  if (post.categories.some(c => c.name === category.name)) {
+                      categoryPosts.push(post);
+                  }
+              });
+              // 对当前分类的文章按照日期降序排序（假设日期格式正确且可比较）
+              categoryPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+              // 只取前五篇文章
+              var topFivePosts = categoryPosts.slice(0, 5);
+              topFivePosts.forEach(function(post) { %>
+              <div class="card mb-3">
+                  <div class="card-body">
+                      <h5 class="card-title"><%- post.title %></h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: left;">发布时间：<%- post.date.format('YYYY-MM-DD HH:mm:ss') %></h6>
+                      <p class="card-text"></p>
+                      <a href="<%- post.path %>" class="btn btn-primary" style="text-align: left;">阅读</a>
+                  </div>
+              </div>
+              <% }); %>
+          </div>
+          <!-- 在tab-pane的底部放置查看全部的链接 -->
+          <div class="text-center my-3">
+              <a href="<%= '/categories/' + category.name %>" class="btn btn-secondary">查看全部</a>
+          </div>
+      </div>
+      <% }); %>
+      <br>
+      <h2>创作团队</h2>
+      <br>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="card text-center">
+            <center class="mt-3">
+            <img src="https://static.turboflint.cn/image/ericlee.png" class="card-img-top rounded-circle" alt="Avatar 1" style="width: 150px;">
+        </center>
+            <div class="card-body">
+              <h5 class="card-title">Eric Lee</h5>
+              <p class="card-text">破碎宇宙项目主要创作者，破碎宇宙的开创者之一，“New Land”联合创始人之一。曾创作出《第二者》，同时也为破碎宇宙的基本概念做出巨大的贡献。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="card text-center">
+            <center class="mt-3">
+            <img src="https://static.turboflint.cn/image/rebecca.jpg" class="card-img-top rounded-circle" alt="Avatar 2" style="width: 150px;">
+        </center>
+            <div class="card-body">
+              <h5 class="card-title">Rebecca</h5>
+              <p class="card-text pb-5">“New Land”联合创始人之一，主要为破碎宇宙的音乐提供无限的动力。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  

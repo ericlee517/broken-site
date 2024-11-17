@@ -1,0 +1,13 @@
+<article>
+    <div class="container" style="margin-top: 6rem;">
+        <h1><%- page.title %></h1> 
+        <p>发布时间：<%- date(page.date, "YYYY-MM-DD") %> &nbsp; 分类：
+            <% page.categories.forEach(function(category) { %>
+                <span class="badge rounded-pill bg-dark"><%= category.name %></span>
+            <% }); %>
+        </p>
+        <div class="article-content">
+            <%- page.content %>  
+        </div>
+    </div>
+</article>

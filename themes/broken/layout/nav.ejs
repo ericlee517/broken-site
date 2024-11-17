@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg bg-dark fixed-top" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="<%- url_for('index') %>">∅ BroKen</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="<%- url_for('index') %>">首页
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%- url_for('categories') %>">分类</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%- url_for('archive') %>">归档</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">关于我们</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">快捷菜单</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">流浪虚无</a>
+            <a class="dropdown-item" href="#">第二者</a>
+            <a class="dropdown-item" href="#">银河杀手</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">人物档案 <i class="bi bi-folder2-open"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
