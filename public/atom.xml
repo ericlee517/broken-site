@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-11-15T10:26:45.995Z</updated>
+  <updated>2024-11-16T11:48:04.539Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,255 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>某篇衍生小说文章</title>
-    <link href="http://example.com/2024/11/15/hello-world/"/>
-    <id>http://example.com/2024/11/15/hello-world/</id>
-    <published>2024-11-14T16:00:00.000Z</published>
-    <updated>2024-11-15T10:26:45.995Z</updated>
+    <title>破碎宇宙世界观</title>
+    <link href="http://example.com/2024/10/28/the-broken-world/"/>
+    <id>http://example.com/2024/10/28/the-broken-world/</id>
+    <published>2024-10-27T16:00:00.000Z</published>
+    <updated>2024-11-16T11:48:04.539Z</updated>
     
-    <content type="html"><![CDATA[<p>文章正文内容……</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>TITLE: BROKEN WORLD</strong></p><p>宇宙有多大，边界在哪里，好像没有人能够回答这个问题。</p><p>第三次世界大战的爆发，以及宇宙环境的混乱，让所有文明失去了活下去的希望。</p><p>传说，远在开普勒星系的某个文明，借助宇宙的力量，开创了平行宇宙的道路，并将他们链接在一起，建立了破碎体系。因为他们互相联系，就像镜子破碎一样，一块一块，能够拼凑起来。</p><p>破碎体系包含了多个主宇宙和其他无数个平行宇宙，他们互相独立存在，互不侵犯。而开创平行宇宙的领导人，牺牲自己，为了宇宙间的安定，成为&lt;破碎的主&gt;，维持破碎体系间的平衡。</p><p>可惜，就有那么几个想要破坏这一切的安定。在某天，有人打碎了这个平衡，逃离了破碎体系，他们发现了更多宇宙，并利用其他宇宙的力量建立了属于自己的体系。&lt;破碎的主&gt;为了宇宙间的安全，将这些体系外的宇宙击碎。</p><p>而这些被击碎的宇宙，成为了体系外的&lt;虚无&gt;。但虚无早已入侵破碎体系，&lt;虚无的主&gt;知道，这一切的性质早就改变。他要揭晓&lt;真相&gt;，与&lt;破碎&gt;抗衡。</p><p>FEDERAL-DATABASE FILE NUMBER D-100000<br>FILE PATH: FEDERAL&#x2F;TOP-SECRET&#x2F;BROKEN-WORLD</p><p><strong>WITHOUT PERMISSION CANNOT OPEN THIS FILE.</strong></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;文章正文内容……&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;TITLE: BROKEN WORLD&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;宇宙有多大，边界在哪里，好像没有人能够回答这个问题。&lt;/p&gt;
+&lt;p&gt;第三次世界大战的爆发，以及宇宙环境的混乱，让所有文明失去了活下去的希望。&lt;/p&gt;
+&lt;p&gt;传说，远在开普勒星系的某个文明</summary>
       
     
     
     
-    <category term="衍生小说" scheme="http://example.com/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
+    <category term="概念内容" scheme="http://example.com/categories/%E6%A6%82%E5%BF%B5%E5%86%85%E5%AE%B9/"/>
     
     
   </entry>
   
   <entry>
-    <title>某篇衍生小说文章</title>
-    <link href="http://example.com/2024/11/15/hello-world%20copy/"/>
-    <id>http://example.com/2024/11/15/hello-world%20copy/</id>
-    <published>2024-11-14T16:00:00.000Z</published>
-    <updated>2024-11-15T10:26:45.995Z</updated>
+    <title>《流浪虚无》已正式发布！</title>
+    <link href="http://example.com/2024/06/30/novel-wans/"/>
+    <id>http://example.com/2024/06/30/novel-wans/</id>
+    <published>2024-06-29T16:00:00.000Z</published>
+    <updated>2024-11-19T10:44:51.699Z</updated>
     
-    <content type="html"><![CDATA[<p>文章正文内容……</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;文章正文内容……&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="衍生小说" scheme="http://example.com/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>某篇衍生小说文章</title>
-    <link href="http://example.com/2024/11/15/hello-world%20copy%202/"/>
-    <id>http://example.com/2024/11/15/hello-world%20copy%202/</id>
-    <published>2024-11-14T16:00:00.000Z</published>
-    <updated>2024-11-15T10:26:45.995Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章正文内容……</p>]]></content>
+    <content type="html"><![CDATA[<p>流浪在虚无缥缈，自由无边的宇宙吧！《流浪虚无》现已开放阅读！</p><p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3525729119851872258&scene=173&subscene=90&sessionid=1721568208&enterid=1721568263&from_msgid=2247484203&from_itemidx=1&count=3&nolastread=1#wechat_redirect">立即前往阅读→</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;文章正文内容……&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;流浪在虚无缥缈，自由无边的宇宙吧！《流浪虚无》现已开放阅读！&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&amp;action=getalbum&amp;album_id=35</summary>
       
     
     
     
-    <category term="衍生小说" scheme="http://example.com/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
+    <category term="Sports" scheme="http://example.com/categories/Sports/"/>
     
+    <category term="Baseball" scheme="http://example.com/categories/Sports/Baseball/"/>
     
-  </entry>
-  
-  <entry>
-    <title>某篇衍生小说文章</title>
-    <link href="http://example.com/2024/11/15/hello-world%20copy%203/"/>
-    <id>http://example.com/2024/11/15/hello-world%20copy%203/</id>
-    <published>2024-11-14T16:00:00.000Z</published>
-    <updated>2024-11-15T10:26:45.995Z</updated>
     
-    <content type="html"><![CDATA[<p>文章正文内容……</p>]]></content>
+    <category term="Injury" scheme="http://example.com/tags/Injury/"/>
     
+    <category term="Fight" scheme="http://example.com/tags/Fight/"/>
     
-      
-      
-    <summary type="html">&lt;p&gt;文章正文内容……&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="衍生小说" scheme="http://example.com/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>某篇衍生小说文章</title>
-    <link href="http://example.com/2024/11/15/hello-world%20copy%204/"/>
-    <id>http://example.com/2024/11/15/hello-world%20copy%204/</id>
-    <published>2024-11-14T16:00:00.000Z</published>
-    <updated>2024-11-15T10:26:45.995Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章正文内容……</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;文章正文内容……&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="衍生小说" scheme="http://example.com/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>某篇衍生小说文章</title>
-    <link href="http://example.com/2024/11/15/hello-world%20copy%205/"/>
-    <id>http://example.com/2024/11/15/hello-world%20copy%205/</id>
-    <published>2024-11-14T16:00:00.000Z</published>
-    <updated>2024-11-15T10:26:45.995Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章正文内容……</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;文章正文内容……&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="衍生小说" scheme="http://example.com/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>某篇衍生小说文章</title>
-    <link href="http://example.com/2024/11/15/hello-world%20copy%206/"/>
-    <id>http://example.com/2024/11/15/hello-world%20copy%206/</id>
-    <published>2024-11-14T16:00:00.000Z</published>
-    <updated>2024-11-15T10:26:45.995Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章正文内容……</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;文章正文内容……&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="衍生小说" scheme="http://example.com/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>某篇衍生小说文章</title>
-    <link href="http://example.com/2024/11/15/hello-world%20copy%207/"/>
-    <id>http://example.com/2024/11/15/hello-world%20copy%207/</id>
-    <published>2024-11-14T16:00:00.000Z</published>
-    <updated>2024-11-15T10:26:45.995Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章正文内容……</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;文章正文内容……&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="衍生小说" scheme="http://example.com/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>某篇衍生小说文章</title>
-    <link href="http://example.com/2024/11/15/hello-world%20copy%208/"/>
-    <id>http://example.com/2024/11/15/hello-world%20copy%208/</id>
-    <published>2024-11-14T16:00:00.000Z</published>
-    <updated>2024-11-15T10:26:45.995Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章正文内容……</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;文章正文内容……&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="衍生小说" scheme="http://example.com/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>某篇衍生小说文章</title>
-    <link href="http://example.com/2024/11/15/hello-world%20copy%209/"/>
-    <id>http://example.com/2024/11/15/hello-world%20copy%209/</id>
-    <published>2024-11-14T16:00:00.000Z</published>
-    <updated>2024-11-15T10:26:45.995Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章正文内容……</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;文章正文内容……&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="衍生小说" scheme="http://example.com/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>人物角色</title>
-    <link href="http://example.com/2024/11/15/hello-world%20copy%2010/"/>
-    <id>http://example.com/2024/11/15/hello-world%20copy%2010/</id>
-    <published>2024-11-14T16:00:00.000Z</published>
-    <updated>2024-11-16T04:02:43.847Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章正文内容……</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;文章正文内容……&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="人物角色" scheme="http://example.com/categories/%E4%BA%BA%E7%89%A9%E8%A7%92%E8%89%B2/"/>
-    
+    <category term="Shocking" scheme="http://example.com/tags/Shocking/"/>
     
   </entry>
   

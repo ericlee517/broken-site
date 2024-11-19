@@ -1,8 +1,8 @@
 ---
-title: 破碎宇宙世界观
+title: 破碎宇宙世界观(1)
 categories:
  - 概念内容
-date: 2024-10-28
+date: 2024-10-28 12:00
 ---
 
 **TITLE: BROKEN WORLD**

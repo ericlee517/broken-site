@@ -1,7 +1,8 @@
+<!--分类归档标签的展示页面 根据需求不同功能分开开发-->
 <%
 // 构建归档数据结构，用于存储按照年份、月份分类的文章数据
 const archiveData = {};
-site.posts.forEach(function(post) {
+site.posts.forEach(post => {
     const year = post.date.format('YYYY');
     const month = post.date.format('MM');
     if (!archiveData[year]) {
@@ -13,7 +14,7 @@ site.posts.forEach(function(post) {
     archiveData[year][month].push(post);
 });
 
-// 将所有归档文章整合到一个数组用于分页计算（虽然这里使用了基础分页助手，此步骤在某些情况下可能不是必需的，但先保留方便理解整体文章数据情况）
+// 将所有归档文章整合到一个数组用于分页计算
 const allArchivePosts = [];
 for (let year in archiveData) {
     for (let month in archiveData[year]) {
@@ -22,75 +23,53 @@ for (let year in archiveData) {
 }
 %>
 
+<!--判断页面类型 输出页面标题-->
 <div class="container">
     <div class="meta">
-
         <% if (page.category) { %>
-          <h1 class="title<%= theme.capitalize_tags && is_tag()? ' text-capitalize' : '' %>" style="margin-top: 6rem;">分类 <%= page.category %> 下的文章</h1>
-      <% } %>
-      
-      <% if (page.tag) { %>
-          <h2 class="title<%= theme.capitalize_tags && is_tag()? ' text-capitalize' : '' %>" style="margin-top: 6rem;">标签 <%= (theme.hashtag_prefix_before_tags? '#' : '') + page.tag %> 下的内容</h2>
-      <% } %>
-      <br>
-      </div>
-
+            <h1 class="title<%= theme.capitalize_tags && is_tag()? ' text-capitalize' : '' %>" style="margin-top: 6rem;">分类 <%= page.category %> 下的文章</h1>
+        <% } %>
+        <% if (page.tag) { %>
+            <h1 class="title<%= theme.capitalize_tags && is_tag()? ' text-capitalize' : '' %>" style="margin-top: 6rem;">标签 <%= (theme.hashtag_prefix_before_tags? '#' : '') + page.tag %> 下的文章（Beta）</h1>
+        <% } %>
+        <br>
+    </div>
     <div class="divider"></div>
+
+    <!--分类页面部分-->
 
     <% if (page.category) { %>
         <%
-        // 直接从 page.posts 中筛选当前分类下的所有文章列表，假设 page.posts 已经是当前页面相关的文章数据
-        const categoryPosts = [];
-        if (page.posts) {
-            page.posts.forEach(function(post) {
-                if (post.categories.some(cat => cat.name === page.category)) {
-                    categoryPosts.push(post);
-                }
-            });
-        }
-
-        // 根据分类文章数量动态调整每页文章数量，如果分类文章数量小于默认每页文章数量，则将每页文章数量设置为分类文章数量
+        const categoryPosts = page.posts?.filter(post => post.categories.some(cat => cat.name === page.category)) || [];
         const perPage = Math.min((page.pagination && page.pagination.per_page) || 10, categoryPosts.length);
-
-        // 获取当前页码，从 page.current 获取，若不存在则默认为1，确保分页功能能正确依据页码进行处理
         const currentPage = page.current? parseInt(page.current, 10) : 1;
-
-        // 计算最大页码数（总页数）
         const maxPage = Math.ceil(categoryPosts.length / perPage);
-
-        // 判断当前页码是否超出最大页码数，如果超出则设置为最大页码数
         const adjustedCurrentPage = Math.min(currentPage, maxPage);
-
-        // 根据当前页码和每页文章数量计算当前分类页面下当前页要展示的文章起始索引
         const startIndex = (adjustedCurrentPage - 1) * perPage;
-
-        // 计算当前分类页面下当前页要展示的文章结束索引，防止超出文章总数
         const endIndex = Math.min(startIndex + perPage, categoryPosts.length);
-
-        // 获取当前分类页面下当前页的文章列表
         const currentCategoryPosts = categoryPosts.slice(startIndex, endIndex);
         %>
-
         <div class="post-list archives">
-            <% currentCategoryPosts.forEach(function(post) { %>
-              
-              <div class="card mb-3">
+            <% currentCategoryPosts.forEach(post => { %>
+            <div class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title"><%- post.title %></h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: left;">发布时间：<%- post.date.format('YYYY-MM-DD HH:mm:ss') %></h6>
                     <p class="card-text"></p>
-                    <a href="<%- post.path %>" class="btn btn-primary" style="text-align: left;">阅读</a>
+                    <a href="/<%- post.path %>" class="btn btn-primary" style="text-align: left;">阅读</a>
                 </div>
             </div>
             <% }) %>
         </div>
-
         <%- partial('_partial/paginator') %>
+
+        <!--归档页面部分-->
 
     <% } else if (page.layout === 'archive') { %>
         <div class="accordion" id="accordionExample">
             <%
-            // 处理归档页面分页逻辑
+            // 处理归档页面分页逻辑，确保文章归档标题只输出一次
+            let hasShownArchiveTitle = false;
             const perPage = page.pagination && page.pagination.per_page || 10;
             const currentPage = page.current? parseInt(page.current, 10) : 1;
             const startIndex = (currentPage - 1) * perPage;
@@ -98,7 +77,7 @@ for (let year in archiveData) {
             const currentArchivePosts = allArchivePosts.slice(startIndex, endIndex);
 
             const months = {};
-            currentArchivePosts.forEach(function(post) {
+            currentArchivePosts.forEach(post => {
                 const year = post.date.format('YYYY');
                 const month = post.date.format('MM');
                 const monthYear = `${year}-${month}`;
@@ -108,91 +87,41 @@ for (let year in archiveData) {
                 months[monthYear].push(post);
             });
 
-            Object.keys(months).forEach(function(monthYear) {
+            Object.keys(months).forEach(monthYear => {
                 const [year, month] = monthYear.split('-');
+                if (!hasShownArchiveTitle) {
+                %>
+                <h1 style="margin-top: 8rem;">文章归档</h1>
+                <br>
+                <%
+                hasShownArchiveTitle = true;
+                }
             %>
-            <h1 style="margin-top: 5rem;"> 文章归档</h1>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="heading<%= monthYear %>">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= monthYear %>" aria-expanded="false" aria-controls="collapse<%= monthYear %>">
-                            <%= year %>年 <%= month %>月
-                        </button>
-                    </h2>
-                    <div id="collapse<%= monthYear %>" class="accordion-collapse collapse" aria-labelledby="heading<%= monthYear %>" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <ul>
-                                <% months[monthYear].forEach(function(post) { %>
-                                <li>
-                                    <a href="/<%= post.path %>"><%= post.title %></a>
-                                </li>
-                                <% }); %>
-                            </ul>
-                        </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading<%= monthYear %>">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= monthYear %>" aria-expanded="false" aria-controls="collapse<%= monthYear %>">
+                        <%= year %>年 <%= month %>月
+                    </button>
+                </h2>
+                <div id="collapse<%= monthYear %>" class="accordion-collapse collapse" aria-labelledby="heading<%= monthYear %>" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <% months[monthYear].forEach(post => { %>
+                            <li>
+                                <a href="/<%= post.path %>"><%= post.title %></a>
+                            </li>
+                            <% }); %>
+                        </ul>
                     </div>
                 </div>
+            </div>
+            <%- partial('_partial/paginator') %>
             <% }); %>
+            <% } else if (page.layout === 'tag') { %>
+                <h1>页面还在努力开发中</h1>
+                <%- partial('_partial/paginator') %>
+                            <% }; %>
 
-        <%- partial('_partial/paginator') %>
 
-    <% } else if (page.tag) { %>
-        <%
-        // 处理标签页面逻辑，获取当前标签下的文章列表
-        const tagPosts = [];
-        if (page.posts) {
-            page.posts.forEach(function(post) {
-                if (post.tags.some(tag => tag.name === page.tag)) {
-                    tagPosts.push(post);
-                }
-            });
-        }
 
-        const perPage = Math.min((page.pagination && page.pagination.per_page) || 10, tagPosts.length);
-        const currentPage = page.current? parseInt(page.current, 10) : 1;
-        const maxPage = Math.ceil(tagPosts.length / perPage);
-        const adjustedCurrentPage = Math.min(currentPage, maxPage);
-        const startIndex = (adjustedCurrentPage - 1) * perPage;
-        const endIndex = Math.min(startIndex + perPage, tagPosts.length);
-        const currentTagPosts = tagPosts.slice(startIndex, endIndex);
-        %>
-
-        <div class="post-list archives">
-            <% currentTagPosts.forEach(function(post) { %>
-            <article class="post-list-item">
-                <a href="<%- url_for(post.path) %>">
-                    <% if (post.cover_image) { %>
-                    <div class="cover-img">
-                        <img src="<%= post.cover_image %>" alt="<%= post.cover_image_alt %>">
-                    </div>
-                    <% } %>
-                    <div class="content">
-                        <% if (post.categories && post.categories.length &&!is_category()) { %>
-                        <div class="categories<%= theme.uppercase_categories? ' text-uppercase' : '' %>">
-                        <% post.categories.forEach((category) => { %>
-                            <span><%= category.name %></span>
-                        <% }) %>
-                        </div>
-                        <% } %>
-                        <div class="title">
-                            <%= post.title %>
-                        </div>
-                        <% if (theme.show_excerpt) { %>
-                        <div class="excerpt">
-                            <%- post.excerpt %>
-                        </div>
-                        <% } %>
-                        <% if (!post.no_date) { %>
-                        <div class="time">
-                            <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][post.date.month()] %></span>
-                            <span>&nbsp;<%- post.date.date() %>,&nbsp;</span>
-                            <span><%= post.date.year() %></span>
-                        </div>
-                        <% } %>
-                    </div>
-                </a>
-            </article>
-            <% }) %>
-        </div>
-
-        <%- partial('_partial/paginator') %>
-    <% } %>
-</div>
+        

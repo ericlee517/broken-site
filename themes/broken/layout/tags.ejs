@@ -1,0 +1,41 @@
+<article class="article article-type-post show container" style="margin-top: 8rem;">
+    <!-- 文章头部区域，展示文章标题以及标签数量 -->
+    <header class="article-header">
+        <h1 class="article-title" itemprop="name"><%= page.title %></h1>
+        <!-- 显示标签的总数 -->
+        <h3>共计&nbsp;<%= site.tags.length %>&nbsp;个标签</h3>
+    </header>
+    <br>
+    <!-- 如果存在标签信息，则开始构建标签的折叠面板（Accordion） -->
+    <% if (site.tags.length) { %>
+    <div class="accordion" id="accordionExample">
+        <!-- 遍历每个标签，构建对应的Accordion项 -->
+        <% site.tags.sort('name').forEach(function(tag) { %>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading<%= tag.name %>">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= tag.name %>" aria-expanded="false" aria-controls="collapse<%= tag.name %>">
+                    <!-- 标签名称作为按钮文本，同时添加点击可跳转到对应标签页面的链接（假设item.path是标签页面路径，需确保其正确性） -->
+                    <%= tag.name %>
+                </button>
+            </h2>
+            <div id="collapse<%= tag.name %>" class="accordion-collapse collapse" aria-labelledby="heading<%= tag.name %>" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ol class="article-list-under-tag">
+                      <a href="/<%- tag.path %>" class="btn btn-dark">前往标签页面</a>
+                      <hr>
+                        <!-- 遍历当前标签下的每篇文章，生成文章列表项 -->
+                        <% tag.posts.forEach(function(post) { %>
+                        <li class="article-list-item">
+                            <a href="/<%- post.path %>"><%= post.title %></a>
+                        </li>
+                        <% }); %>
+                      </ol>
+                </div>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+    <% } %>
+  </article>
+  
+  
