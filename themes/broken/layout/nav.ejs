@@ -7,31 +7,31 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="<%- url_for('index') %>">首页
+          <a class="nav-link" href="<%- url_for('index') %>"><%= __('nav.home') %>
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%- url_for('categories') %>">分类</a>
+          <a class="nav-link" href="<%- url_for('categories') %>"><%= __('nav.category') %></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%- url_for('tags') %>">标签</a>
+          <a class="nav-link" href="<%- url_for('tags') %>"><%= __('nav.tag') %></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%- url_for('archive') %>">归档</a>
+          <a class="nav-link" href="<%- url_for('archive') %>"><%= __('nav.archive') %></a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="<%- url_for('about') %>">关于我们</a>
+          <a class="nav-link" href="<%- url_for('about') %>"><%= __('nav.about') %></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">快捷菜单</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">流浪虚无</a>
-            <a class="dropdown-item" href="#">第二者</a>
-            <a class="dropdown-item" href="#">银河杀手</a>
+            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">流浪虚无</a>
+            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">第二者</a>
+            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">银河杀手</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">人物档案 <i class="bi bi-folder2-open"></i></a>
+            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">人物档案 <i class="bi bi-folder2-open"></i></a>
           </div>
         </li>
       </ul>

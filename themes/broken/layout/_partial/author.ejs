@@ -1,0 +1,18 @@
+<div class="author-content container" style="margin-top: 6rem;">
+    <div class="author-avatar">
+      <% if (theme.authors[page.author].avatar_url) { %>
+        <img src="<%= theme.authors[page.author].avatar_url %>" alt="<%= theme.authors[page.author].name %>'s Avatar" class="rounded-circle" style="width: 200px;" >
+      <% } else { %>
+        <img src="/images/default_avatar.jpg" alt="Default Avatar">
+      <% } %>
+    </div>
+    <br>
+    <h1> <%= '作者：'+ theme.authors[page.author].name %> </h1>
+    <div class="author-bio">
+      <p>简介：<%= theme.authors[page.author].bio %></p>
+    </div>
+    <hr class="divider">
+    <div class="page-content">
+         <%- page.content%>
+    </div>
+  </div>

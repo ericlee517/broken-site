@@ -4,21 +4,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 mb-3">
-                <h5>关于我们</h5>
+                <h5><%= __('footer.about_us') %></h5>
                 <p>在破碎之中或许还隐藏着虚无的影子。你看见祂了吗？如果你看见了，请要犹豫，立刻逃跑。否则你将会失去一切，在虚无的花言巧语下失去你所拥有的一切!</p>
             </div>
             <div class="col-md-4 mb-3">
-                <h5>更多链接</h5>
+                <h5><%= __('footer.link') %></h5>
                 <ul class="list-unstyled">
-                    <li><a href="https://turboflint.cn/" class="text-white">涡轮火石官网</a></li>
-                    <li><a href="https://turboflint.cn/blog" class="text-white">博客</a></li>
-                    <li><a href="https://github.com/ericlee517" class="text-white">Github</a></li>
-                    <li><a href="https://turboflint.cn/" class="text-white">版权使用声明</a></li>
+                  <% Object.entries(theme.links).forEach(([linkName, linkUrl]) => { %>
+                    <li><a href="<%= linkUrl %>" class="text-white"><%= linkName %></a></li>
+                  <% }); %>
                 </ul>
-            </div>
+              </div>
 
             <div class="col-md-4 mb-3">
-                <h5>关注微信公众号</h5>
+                <h5><%= __('footer.wechat_public') %></h5>
                 <img src="https://static.turboflint.cn/image/wechat-qrcode.png" alt="微信公众号关注二维码" style="width: 330px;">
             </div>
            
@@ -27,7 +26,26 @@
         <div class="text-center">
             &copy; <span id="current-year"></span><%= new Date().getFullYear() %> Turbo Flint & Eric Lee.
             <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://broken.turboflint.cn">BroKen Universe Project</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://turboflint.cn">Turbo Flint</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a><br>
-                The BroKen Universe theme highly customized based on <a href="https://hexo.io">Hexo</a>.</p>
+                Power By <a href="https://hexo.io">Hexo</a>.</p>
+                <span style="font-size: 14px;">theme version <a href=""</span> 
         </div>
     </div>
 </footer>
+
+<div class="modal fade " id="no-deve" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">提示</h1>
+        </div>
+        <div class="modal-body">
+          该功能还在努力开发中~开发组时间有限，正在努力啦！
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

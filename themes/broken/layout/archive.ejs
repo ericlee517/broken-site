@@ -21,6 +21,13 @@ for (let year in archiveData) {
         allArchivePosts.push(...archiveData[year][month]);
     }
 }
+
+// 按照时间从新到旧排序
+allArchivePosts.sort((a, b) => {
+    const aDate = new Date(a.date);
+    const bDate = new Date(b.date);
+    return bDate - aDate;
+});
 %>
 
 <!--判断页面类型 输出页面标题-->
@@ -30,7 +37,7 @@ for (let year in archiveData) {
             <h1 class="title<%= theme.capitalize_tags && is_tag()? ' text-capitalize' : '' %>" style="margin-top: 6rem;">分类 <%= page.category %> 下的文章</h1>
         <% } %>
         <% if (page.tag) { %>
-            <h1 class="title<%= theme.capitalize_tags && is_tag()? ' text-capitalize' : '' %>" style="margin-top: 6rem;">标签 <%= (theme.hashtag_prefix_before_tags? '#' : '') + page.tag %> 下的文章（Beta）</h1>
+            <h1 class="title<%= theme.capitalize_tags && is_tag()? ' text-capitalize' : '' %>" style="margin-top: 6rem;">标签 <%= (theme.hashtag_prefix_before_tags? '#' : '') + page.tag %> 下的文章（努力开发中）
         <% } %>
         <br>
     </div>
@@ -87,11 +94,18 @@ for (let year in archiveData) {
                 months[monthYear].push(post);
             });
 
-            Object.keys(months).forEach(monthYear => {
+            // 先获取所有月份组合并排序
+            const sortedMonthYears = Object.keys(months).sort((a, b) => {
+                const aDate = new Date(a.split('-')[0], a.split('-')[1]);
+                const bDate = new Date(b.split('-')[0], b.split('-')[1]);
+                return bDate - aDate;
+            });
+
+            sortedMonthYears.forEach(monthYear => {
                 const [year, month] = monthYear.split('-');
                 if (!hasShownArchiveTitle) {
                 %>
-                <h1 style="margin-top: 8rem;">文章归档</h1>
+                <h1 style="margin-top: 6rem;">文章归档</h1>
                 <br>
                 <%
                 hasShownArchiveTitle = true;

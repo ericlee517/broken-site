@@ -1,10 +1,25 @@
+# v1.0.2 develop version  
 title: 虚无之下，皆为毁灭 - 破碎宇宙官方网站
 
-author: Turbo Flint
-
+# Menu Config
 menus: 
   主页: /
   关于: /about
 
+# Footer Link
 links:
-  Turbo Flint: https://turboflint.cn/
+  Turbo Flint: "https://turboflint.cn/"
+  Blog: "https://turboflint.cn/blog"
+  Github: "https://github.com/ericlee517"
+  Copyright: "https://docs.turboflint.cn/others/broken-copyright"
+
+# Authors Config Please Read: 
+authors:
+  Eric:
+    name: Eric
+    avatar_url: https://static.turboflint.cn/image/ericlee.png
+    bio: Hello, everyone! I'm the principal person in charge of the Broken Universe project and also the founder of Turbo Flint. In the future, I'll work even harder to create more and better works. 
+  Rebecca:
+    name: Rebecca
+    avatar_url: https://static.turboflint.cn/image/rebecca.jpg
+    bio: test_2

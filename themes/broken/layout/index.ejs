@@ -5,14 +5,14 @@
         Your browser does not support the video tag.
     </video>
     <div class="text-overlay">
-        <h1 class="animate__animated animate__fadeInUp" style="font-size: 3rem">∅<br>虚无之下 皆为毁灭</h1>
-        <p  class="animate__animated animate__fadeInUp">欢迎来到破碎<br>以及<br>欢迎来到虚无<br>↓</p>
+        <h1 class="animate__animated animate__fadeInUp" style="font-size: 3rem">∅<br><%= __('index.title') %></h1>
+        <p  class="animate__animated animate__fadeInUp"><%= __('index.sm_title') %><br>↓</p>
             
     </div>
 </div>
 
 <div class="container main-content">
-  <h2 id="all" class="mt-3">所有内容</h2>
+  <h2 id="all" class="mt-3"><%= __('index.all') %></h2>
   <div class="card mb-4 mt-4">
     <div class="card-header">
       衍生小说
@@ -20,7 +20,7 @@
     <div class="card-body">
       <h5 class="card-title">破碎宇宙衍生小说</h5>
       <p class="card-text">根据破碎宇宙所衍生出的小说，在每一个故事中感受来自破碎的魅力。</p>
-      <a href="#" class="btn btn-primary">立即阅读</a>
+      <a href="/2024/11/19/all-novel/" class="btn btn-primary">立即阅读</a>
     </div>
   </div>
   <br>
@@ -31,12 +31,12 @@
     <div class="card-body">
       <h5 class="card-title">破碎宇宙世界观内容</h5>
       <p class="card-text">破碎宇宙的所有世界观内容，分析其中的小细节和小故事。</p>
-      <a href="#" class="btn btn-primary">立即阅读</a>
+      <a href="/2024/10/28/the-broken-world/" class="btn btn-primary">立即阅读</a>
     </div>
   </div>
   <br>
 
-  <h2 id="news" class="mt-4">所有文章</h2>
+  <h2 id="news" class="mt-4"><%= __('index.post') %></h2>
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
       <% site.categories.data.forEach(function(category, index) { %>
       <li class="nav-item" role="presentation">
@@ -86,7 +86,7 @@
       </div>
       <% }); %>
       <br>
-      <h2>创作团队</h2>
+      <h2><%= __('index.team') %></h2>
       <br>
       <div class="row">
         <div class="col-md-6 mb-3">
@@ -107,7 +107,7 @@
         </center>
             <div class="card-body">
               <h5 class="card-title">Rebecca</h5>
-              <p class="card-text">“New Land”联合创始人之一，为破碎宇宙的音乐提供无限的动力。</p>
+              <p class="card-text">“New Land”联合创始人之一，发挥出了无限的音乐才能，为破碎宇宙的音乐提供无限的动力。</p>
             </div>
           </div>
         </div>

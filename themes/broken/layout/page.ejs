@@ -3,5 +3,9 @@
 <% } %>
 
 <% if (is_page() && page.type === 'links') { %>
-	<%- partial('links') %>
+	<%- partial('_partial/links') %>
+<% } %>
+
+<% if (is_page() && page.type === 'author') { %>
+	<%- partial('_partial/author') %>
 <% } %>
