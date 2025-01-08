@@ -20,9 +20,9 @@
             </h2>
             <div id="collapse<%= tag.name %>" class="accordion-collapse collapse" aria-labelledby="heading<%= tag.name %>" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
+                    <a href="/<%- tag.path %>" class="btn btn-dark"><%= __('page.goto_tag') %></a>
+                    <hr>
                     <ol class="article-list-under-tag">
-                      <a href="/<%- tag.path %>" class="btn btn-dark">前往标签页面</a>
-                      <hr>
                         <!-- 遍历当前标签下的每篇文章，生成文章列表项 -->
                         <% tag.posts.forEach(function(post) { %>
                         <li class="article-list-item">

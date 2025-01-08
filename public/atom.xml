@@ -3,25 +3,120 @@
   <title>BroKen</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://broken.turboflint.cn/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2024-11-16T11:48:04.539Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://broken.turboflint.cn/"/>
+  <updated>2024-12-28T10:44:14.175Z</updated>
+  <id>https://broken.turboflint.cn/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>BROKEN</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>破碎宇宙世界观</title>
-    <link href="http://example.com/2024/10/28/the-broken-world/"/>
-    <id>http://example.com/2024/10/28/the-broken-world/</id>
-    <published>2024-10-27T16:00:00.000Z</published>
-    <updated>2024-11-16T11:48:04.539Z</updated>
+    <title>站点日志（1）</title>
+    <link href="https://broken.turboflint.cn/2024/12/27/log_241227/"/>
+    <id>https://broken.turboflint.cn/2024/12/27/log_241227/</id>
+    <published>2024-12-26T16:00:00.000Z</published>
+    <updated>2024-12-28T10:44:14.175Z</updated>
+    
+    <content type="html"><![CDATA[<p>测试</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;测试&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="站点日志" scheme="https://broken.turboflint.cn/categories/%E7%AB%99%E7%82%B9%E6%97%A5%E5%BF%97/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《流浪虚无：重影》发布定档</title>
+    <link href="https://broken.turboflint.cn/2024/12/12/wans_2/"/>
+    <id>https://broken.turboflint.cn/2024/12/12/wans_2/</id>
+    <published>2024-12-11T16:00:00.000Z</published>
+    <updated>2024-12-28T10:44:14.182Z</updated>
+    
+    <content type="html"><![CDATA[<p>2025年1月20日起 《流浪虚无：重影》正式开始更新！</p><p>每周一更新，见证内森与格里芬的最终结局，见证他们之间的最终羁绊。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2025年1月20日起 《流浪虚无：重影》正式开始更新！&lt;/p&gt;
+&lt;p&gt;每周一更新，见证内森与格里芬的最终结局，见证他们之间的最终羁绊。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="衍生小说" scheme="https://broken.turboflint.cn/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>所有已发布的衍生小说</title>
+    <link href="https://broken.turboflint.cn/2024/11/19/all-novel/"/>
+    <id>https://broken.turboflint.cn/2024/11/19/all-novel/</id>
+    <published>2024-11-19T09:30:00.000Z</published>
+    <updated>2025-01-04T02:34:24.154Z</updated>
+    
+    <content type="html"><![CDATA[<div class="card text-white bg-dark mb-3" style="max-width: 20rem;">  <div class="card-body">    <h4 class="card-title">流浪虚无</h4>    <span class="badge text-bg-success"><i class="bi bi-wechat"></i> 微信公众号 抢先发布</span> <span class="badge text-bg-primary">免费阅读</span>    <br>    <p class="card-text">流浪在这片虚无缥缈的宇宙中，寻找自己在宇宙中的意义吧！</p>        <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3525729119851872258&scene=173&subscene=90&sessionid=1721568208&enterid=1721568263&from_msgid=2247484203&from_itemidx=1&count=3&nolastread=1#wechat_redirect" class="card-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">立即阅读 →</a>  </div></div><div class="card text-white bg-dark mb-3" style="max-width: 20rem;">  <div class="card-body">    <h4 class="card-title">第二者</h4>    <span class="badge text-bg-success"><i class="bi bi-wechat"></i> 微信公众号 抢先发布</span> <span class="badge text-bg-primary">免费阅读</span>    <br>    <p class="card-text">《第二者》中不只是谈到了追求爱情，同时也讲到了如何找到自己的路，如何寻找那个真正属于自己的归属。不再被别人推搡，而是站定脚步，勇敢去做。</p>        <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3517284581697224706&scene=126&sessionid=1145766547#wechat_redirect" class="card-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">立即阅读 →</a>  </div></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;card text-white bg-dark mb-3&quot; style=&quot;max-width: 20rem;&quot;&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;h4 class=&quot;card-title&quot;&gt;流浪虚无&lt;/h4&gt;
+    &lt;spa</summary>
+      
+    
+    
+    
+    <category term="衍生小说" scheme="https://broken.turboflint.cn/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《银河杀手》发布定档</title>
+    <link href="https://broken.turboflint.cn/2024/11/09/killer/"/>
+    <id>https://broken.turboflint.cn/2024/11/09/killer/</id>
+    <published>2024-11-08T16:00:00.000Z</published>
+    <updated>2024-12-28T10:44:14.168Z</updated>
+    
+    <content type="html"><![CDATA[<p>血腥 暴力 还是死亡 毁灭即刻揭晓。</p><p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3777349787142455298&scene=173&subscene=91&sessionid=1735280160&enterid=1735281117&from_msgid=2247484623&from_itemidx=2&count=3&nolastread=1#wechat_redirect">立即试读前三个章节</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;血腥 暴力 还是死亡 毁灭即刻揭晓。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&amp;action=getalbum&amp;album_id=37773497871424</summary>
+      
+    
+    
+    
+    <category term="衍生小说" scheme="https://broken.turboflint.cn/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>破碎宇宙世界观(1)</title>
+    <link href="https://broken.turboflint.cn/2024/10/28/the-broken-world/"/>
+    <id>https://broken.turboflint.cn/2024/10/28/the-broken-world/</id>
+    <published>2024-10-28T04:00:00.000Z</published>
+    <updated>2024-12-28T10:43:52.718Z</updated>
     
     <content type="html"><![CDATA[<p><strong>TITLE: BROKEN WORLD</strong></p><p>宇宙有多大，边界在哪里，好像没有人能够回答这个问题。</p><p>第三次世界大战的爆发，以及宇宙环境的混乱，让所有文明失去了活下去的希望。</p><p>传说，远在开普勒星系的某个文明，借助宇宙的力量，开创了平行宇宙的道路，并将他们链接在一起，建立了破碎体系。因为他们互相联系，就像镜子破碎一样，一块一块，能够拼凑起来。</p><p>破碎体系包含了多个主宇宙和其他无数个平行宇宙，他们互相独立存在，互不侵犯。而开创平行宇宙的领导人，牺牲自己，为了宇宙间的安定，成为&lt;破碎的主&gt;，维持破碎体系间的平衡。</p><p>可惜，就有那么几个想要破坏这一切的安定。在某天，有人打碎了这个平衡，逃离了破碎体系，他们发现了更多宇宙，并利用其他宇宙的力量建立了属于自己的体系。&lt;破碎的主&gt;为了宇宙间的安全，将这些体系外的宇宙击碎。</p><p>而这些被击碎的宇宙，成为了体系外的&lt;虚无&gt;。但虚无早已入侵破碎体系，&lt;虚无的主&gt;知道，这一切的性质早就改变。他要揭晓&lt;真相&gt;，与&lt;破碎&gt;抗衡。</p><p>FEDERAL-DATABASE FILE NUMBER D-100000<br>FILE PATH: FEDERAL&#x2F;TOP-SECRET&#x2F;BROKEN-WORLD</p><p><strong>WITHOUT PERMISSION CANNOT OPEN THIS FILE.</strong></p>]]></content>
     
@@ -36,39 +131,56 @@
     
     
     
-    <category term="概念内容" scheme="http://example.com/categories/%E6%A6%82%E5%BF%B5%E5%86%85%E5%AE%B9/"/>
+    <category term="概念内容" scheme="https://broken.turboflint.cn/categories/%E6%A6%82%E5%BF%B5%E5%86%85%E5%AE%B9/"/>
     
     
   </entry>
   
   <entry>
-    <title>《流浪虚无》已正式发布！</title>
-    <link href="http://example.com/2024/06/30/novel-wans/"/>
-    <id>http://example.com/2024/06/30/novel-wans/</id>
-    <published>2024-06-29T16:00:00.000Z</published>
-    <updated>2024-11-19T10:44:51.699Z</updated>
+    <title>第二部破碎宇宙衍生小说《第二者》已正式发布！</title>
+    <link href="https://broken.turboflint.cn/2024/09/28/novel-ones/"/>
+    <id>https://broken.turboflint.cn/2024/09/28/novel-ones/</id>
+    <published>2024-09-28T04:00:00.000Z</published>
+    <updated>2024-12-28T10:43:52.709Z</updated>
     
-    <content type="html"><![CDATA[<p>流浪在虚无缥缈，自由无边的宇宙吧！《流浪虚无》现已开放阅读！</p><p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3525729119851872258&scene=173&subscene=90&sessionid=1721568208&enterid=1721568263&from_msgid=2247484203&from_itemidx=1&count=3&nolastread=1#wechat_redirect">立即前往阅读→</a></p>]]></content>
+    <content type="html"><![CDATA[<p>爱情永远都不分性别，也不分距离，不分性格。想爱就去追求，就去勇敢地去相爱。<br>《第二者》中不只是谈到了追求爱情，同时也讲到了如何找到自己的路，如何寻找那个真正属于自己的归属。</p><p>不再被别人推搡，而是站定脚步，勇敢去做。</p><p>一场充满阴谋的车祸，导致了一切的发生。约翰将在这场车祸之下逐渐觉醒，在经历所有扑朔迷离的事件发生后，他会不会「成为自己」，抛弃过往所有的被动，自己掌控未来的走动。</p><p>约翰：“我从来都不会成为被动的人，除非紧急情况。现在我有了我爱的人，有了追求的目标，也有了活下去的希望，而我相信安迪不会背叛我。我不是恋爱脑，也不是什么舔狗，而是自己。约翰，你将永远成为自己。掌控所有，背弃无关紧要的事情。”</p><p>安迪：“不后悔。为什么要后悔？为了丈夫，我愿意做所有事。威胁只是插曲的一部分，而生活也是一种挑战。就像丛林中危险的环境，每个人都要被迫适应。可我相信你可以做到一件事，约翰，那就是不要被迫适应，你也要改变整个世界的规则。规则是死的，但你可以成为编写规则的人。”</p><p>《第二者》现已开放阅读！</p><p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3517284581697224706&scene=126&sessionid=1145766547#wechat_redirect">立即前往阅读→</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;流浪在虚无缥缈，自由无边的宇宙吧！《流浪虚无》现已开放阅读！&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&amp;action=getalbum&amp;album_id=35</summary>
+    <summary type="html">&lt;p&gt;爱情永远都不分性别，也不分距离，不分性格。想爱就去追求，就去勇敢地去相爱。&lt;br&gt;《第二者》中不只是谈到了追求爱情，同时也讲到了如何找到自己的路，如何寻找那个真正属于自己的归属。&lt;/p&gt;
+&lt;p&gt;不再被别人推搡，而是站定脚步，勇敢去做。&lt;/p&gt;
+&lt;p&gt;一场充满阴谋的车祸，导致</summary>
       
     
     
     
-    <category term="Sports" scheme="http://example.com/categories/Sports/"/>
-    
-    <category term="Baseball" scheme="http://example.com/categories/Sports/Baseball/"/>
+    <category term="衍生小说" scheme="https://broken.turboflint.cn/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
     
     
-    <category term="Injury" scheme="http://example.com/tags/Injury/"/>
+  </entry>
+  
+  <entry>
+    <title>首部实验性衍生小说《流浪虚无》已正式发布！</title>
+    <link href="https://broken.turboflint.cn/2024/06/30/novel-wans/"/>
+    <id>https://broken.turboflint.cn/2024/06/30/novel-wans/</id>
+    <published>2024-06-30T04:00:00.000Z</published>
+    <updated>2024-12-28T10:43:52.717Z</updated>
     
-    <category term="Fight" scheme="http://example.com/tags/Fight/"/>
+    <content type="html"><![CDATA[<p>我曾信仰虚无，期待他能给我一些希望。可最后，他令我失望了。</p><p>我曾经是他最忠诚的信徒，他赐予我力量，赐予我一些我想要的东西。我帮助他毁灭宇宙，毁灭文明。</p><p>可到最后，他摒弃我给他的一切。他想要夺取整个????，我终于发现了他的阴谋，他只是在利用我。</p><p>最后，我砍断了黑洞，将虚无吞噬。可他能逃到任何地方，我知道这没有任何用处，至少能让他不再耀武扬威。</p><p>我逃到了这里，只想过着普普通通的日子，不再想着虚无。尽管体内流淌着虚无的力量，但我相信，总有一天我会让他知道，我会好好利用虚无的力量，让他发挥用处。</p><p>流浪在虚无缥缈，自由无边的宇宙吧！《流浪虚无》现已开放阅读！</p><p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3525729119851872258&scene=173&subscene=90&sessionid=1721568208&enterid=1721568263&from_msgid=2247484203&from_itemidx=1&count=3&nolastread=1#wechat_redirect">立即前往阅读→</a></p>]]></content>
     
-    <category term="Shocking" scheme="http://example.com/tags/Shocking/"/>
+    
+      
+      
+    <summary type="html">&lt;p&gt;我曾信仰虚无，期待他能给我一些希望。可最后，他令我失望了。&lt;/p&gt;
+&lt;p&gt;我曾经是他最忠诚的信徒，他赐予我力量，赐予我一些我想要的东西。我帮助他毁灭宇宙，毁灭文明。&lt;/p&gt;
+&lt;p&gt;可到最后，他摒弃我给他的一切。他想要夺取整个????，我终于发现了他的阴谋，他只是在利用我。&lt;</summary>
+      
+    
+    
+    
+    <category term="衍生小说" scheme="https://broken.turboflint.cn/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/"/>
+    
     
   </entry>
   

@@ -1,13 +1,12 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-        min-height: 100%;
-        display: flex; /* 容器为flex布局 */
-        flex-direction: column; /* 方向为纵向，保持正常的从上到下文档流 */
-    
+  min-height: 100%;
+  display: flex; /* 容器为flex布局 */
+  flex-direction: column; /* 方向为纵向，保持正常的从上到下文档流 */
 }
 
 body {
@@ -24,128 +23,163 @@ body {
 }
 
 footer {
-    margin-top: auto; 
+  margin-top: auto;
 }
 
 .main-content {
-    flex: 1;
-    min-height: 0;
-    overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
 }
-
 
 /* 视频背景容器样式 */
 .video-bg {
-    position: relative;
-    width: 100%;
-    /* 设置一个固定高度，你可以根据实际需求调整这个数值，这里假设为屏幕高度的50%，避免它无限延伸遮挡后续内容 */
-    height: 100vh;
-    overflow: hidden; 
+  position: relative;
+  width: 100%;
+  /* 设置一个固定高度，你可以根据实际需求调整这个数值，这里假设为屏幕高度的50%，避免它无限延伸遮挡后续内容 */
+  height: 100vh;
+  overflow: hidden;
 }
 
 .card {
-    margin-left: 15px; /* 根据实际需求调整左边距数值 */
-    margin-right: 15px; /* 根据实际需求调整右边距数值 */
+  margin-left: 15px; /* 根据实际需求调整左边距数值 */
+  margin-right: 15px; /* 根据实际需求调整右边距数值 */
 }
-
 
 /* 视频样式 */
 video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: -1; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 /* 遮罩层样式 */
 .video-mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 0; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
 }
 
 /* 文字覆盖层样式 */
 .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-    z-index: 1; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 1;
 }
 
 /* 后续内容容器样式，添加一些间距让其与视频背景部分区分开，这里以 margin-top 为例，可按需调整 */
 .main-content {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 /* 整体分页容器样式 */
 /* 整体分页容器样式 */
 .pagination-wrapper {
-    text-align: center; /* 让分页内容在页面中居中显示 */
-    margin-top: 20px; /* 距离上方元素的间距，可以根据实际调整 */
+  text-align: center; /* 让分页内容在页面中居中显示 */
+  margin-top: 20px; /* 距离上方元素的间距，可以根据实际调整 */
 }
 
 .page-number {
-    margin-left: 2px;
-    margin-right: 2px;
-    text-decoration: none;
-    font-size: 0.85rem;
+  margin-left: 2px;
+  margin-right: 2px;
+  text-decoration: none;
+  font-size: 0.85rem;
 }
 
 .next {
-    margin-left: 5px;
-    margin-right: 5px;
-    text-decoration: none;
-    font-size: 0.85rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  font-size: 0.85rem;
 }
 
 .prev {
-    margin-left: 5px;
-    margin-right: 5px;
-    text-decoration: none;
-    font-size: 0.85rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  font-size: 0.85rem;
 }
 
-.extend{
-    display: inline-block; /* 让链接可以和其他页码元素水平排列 */
-    padding: 8px 12px; /* 内边距设置，可调整按钮大小的视觉效果 */
-    margin: 0 5px; /* 左右间距为5px，可调整间距大小 */
-    text-decoration: none; /* 去掉默认的下划线 */
-    border: 1px solid #ccc; /* 边框样式，颜色为浅灰色，可调整 */
-    border-radius: 5px; /* 圆角效果，让按钮看起来更圆润美观 */
+.extend {
+  display: inline-block; /* 让链接可以和其他页码元素水平排列 */
+  padding: 8px 12px; /* 内边距设置，可调整按钮大小的视觉效果 */
+  margin: 0 5px; /* 左右间距为5px，可调整间距大小 */
+  text-decoration: none; /* 去掉默认的下划线 */
+  border: 1px solid #ccc; /* 边框样式，颜色为浅灰色，可调整 */
+  border-radius: 5px; /* 圆角效果，让按钮看起来更圆润美观 */
 }
 
-.extend:hover{
-    background-color: #f5f5f5; /* 悬停时背景色变为浅灰色，可自定义颜色 */
-    color: #000; /* 悬停时文字颜色变为黑色，可调整 */
+.extend:hover {
+  background-color: #f5f5f5; /* 悬停时背景色变为浅灰色，可自定义颜色 */
+  color: #000; /* 悬停时文字颜色变为黑色，可调整 */
 }
 
-.page-number{
-    display: inline-block; /* 让页码数字可以水平排列 */
-    padding: 8px 12px; /* 内边距设置，可调整按钮大小的视觉效果 */
-    margin: 0 3px; /* 左右间距为3px，可调整间距大小 */
-    text-decoration: none; /* 去掉默认的下划线 */
-    border: 1px solid #ccc; /* 边框样式，颜色为浅灰色，可调整 */
-    border-radius: 5px; /* 圆角效果，让按钮看起来更圆润美观 */
+.page-number {
+  display: inline-block; /* 让页码数字可以水平排列 */
+  padding: 8px 12px; /* 内边距设置，可调整按钮大小的视觉效果 */
+  margin: 0 3px; /* 左右间距为3px，可调整间距大小 */
+  text-decoration: none; /* 去掉默认的下划线 */
+  border: 1px solid #ccc; /* 边框样式，颜色为浅灰色，可调整 */
+  border-radius: 5px; /* 圆角效果，让按钮看起来更圆润美观 */
 }
 
-.page-number:hover{
-    background-color: #f5f5f5; /* 悬停时背景色变为浅灰色，可自定义颜色 */
-    color: #000; /* 悬停时文字颜色变为黑色，可调整 */
+.page-number:hover {
+  background-color: #f5f5f5; /* 悬停时背景色变为浅灰色，可自定义颜色 */
+  color: #000; /* 悬停时文字颜色变为黑色，可调整 */
 }
 .page-number.current {
-    background-color: #fff; /* 当前页码背景色设为蓝色，可根据主题色调整 */
-    color: #000; /* 当前页码文字颜色设为白色，对比明显 */
-    pointer-events: none; /* 禁止当前页码再次点击，因为它是当前页不需要响应点击事件 */
+  background-color: #fff; /* 当前页码背景色设为蓝色，可根据主题色调整 */
+  color: #000; /* 当前页码文字颜色设为白色，对比明显 */
+  pointer-events: none; /* 禁止当前页码再次点击，因为它是当前页不需要响应点击事件 */
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* 图片样式 */
+.post_img img {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    object-fit: contain; 
+}
+
+@media (max-width: 992px) {
+  .post_img img {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .post_img img {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  .post_img img {
+    max-width: 70%;
+  }
+}

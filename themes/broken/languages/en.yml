@@ -1,20 +1,68 @@
 index:
-  site_title: Beneath The Void, All Is Destruction - BROKEN OFFICAL WEBSITE
-  title: Beneath The Void, All Is Destruction
-  sm_title: Welcome to BROKEN AND NOTHINGNESS
+  site_title: Beneath the Void, All is Destruction - Broken Universe Project Official Website
+  title: Beneath the Void, All is Destruction
+  sm_title: Welcome to Broken and the Nothingness
   all: All Content
   post: All Posts
-  team: Our Team
+  team: Creative Team
+
+derivative_novel:
+  title: Derivative Novels
+  subheading: Broken Universe Derivative Novels
+  content: Novels derived from the Broken Universe, feel the charm of Broken in every story.
+  button: Read Now
+
+worldview:
+  title: Worldview
+  subheading: Broken Universe Worldview Content
+  content: All the worldview content of the Broken Universe, analyzing the small details and stories within.
+  button: Read Now
+
+post:
+  date: Published Date
+  category: Category
+  read: Read
+  see_more: See All
 
 nav:
   home: Home
+  search: Search
   category: Category
   tag: Tag
   archive: Archive
   about: About
-  menu: Menu
+  menu: Quick Menu
+
+menu:
+  wandering_nothingness: Wandering Nothingness
+  the_galaxy_killer: The Galaxy Killer
+  the_second_one: The Second One
+  role_files: Character Files
+
+author:
+  name: Author
+  bio: Bio
+
+page:
+  category: Post Category
+  total_category: Total of %d Categories
+  posts_category: Posts under Category %s
+  posts_tag: Posts under Tag %s
+  goto_category: Go to Category Page
+  tag: Post Tag
+  total_tag: Total of %d Tags
+  goto_tag: Go to Tag Page
+  archive: Post Archive
+  author: Author of this Post
 
 footer:
   about_us: About Us
+  about_content: In the Broken, there may still be shadows of the Void. Do you see it? If you do, don't hesitate, run away immediately. Otherwise, you will lose everything and everything you have under nothingness!
   link: Link
-  wechat_public: Follw WeChat Public
+  wechat_public_image: Wechat Public Qrcode
+  wechat_public: Follow Wechat Public
+
+404:
+  title: 404 Not Found
+  message: Oops! The page you are looking for does not exist. |*'Å'）ノ
+  back: Return to the previous page

@@ -3,13 +3,18 @@
       <% if (theme.authors[page.author].avatar_url) { %>
         <img src="<%= theme.authors[page.author].avatar_url %>" alt="<%= theme.authors[page.author].name %>'s Avatar" class="rounded-circle" style="width: 200px;" >
       <% } else { %>
-        <img src="/images/default_avatar.jpg" alt="Default Avatar">
+        <img src="https://static.turboflint.cn/image/user.svg" alt="Default Avatar">
       <% } %>
     </div>
     <br>
     <h1> <%= '作者：'+ theme.authors[page.author].name %> </h1>
     <div class="author-bio">
-      <p>简介：<%= theme.authors[page.author].bio %></p>
+      <% if (theme.authors[page.author].type == 'official') { %>
+        <i class="bi bi-patch-check-fill" style="color: hwb(217 25% 6% / 0.961);"></i> 认证：<%= theme.authors[page.author].bio %>
+      <% } else { %>
+        <p>简介：<%= theme.authors[page.author].bio %></p>
+      <% } %>
+      
     </div>
     <hr class="divider">
     <div class="page-content">

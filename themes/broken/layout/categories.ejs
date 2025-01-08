@@ -1,40 +1,42 @@
 <article class="article article-type-post show container" style="margin-top: 8rem;">
-  <!-- 文章头部区域，展示文章标题以及分类数量 -->
-  <header class="article-header">
-      <h1 class="article-title" itemprop="name"><%= page.title %></h1>
-      <!-- 显示分类的总数 -->
-      <h3>共计&nbsp;<%= site.categories.length %>&nbsp;个分类</h3>
-  </header>
-  <br>
-  <!-- 如果存在分类信息，则开始构建分类的折叠面板（Accordion） -->
-  <% if (site.categories.length) { %>
-  <div class="accordion" id="accordionExample">
-      <!-- 遍历每个分类，构建对应的Accordion项 -->
-      <% site.categories.sort('name').forEach(function(category) { %>
-      <div class="accordion-item">
-          <h2 class="accordion-header" id="heading<%= category.name %>">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= category.name %>" aria-expanded="false" aria-controls="collapse<%= category.name %>">
-                  <!-- 分类名称作为按钮文本，同时添加点击可跳转到对应分类页面的链接（假设item.path是分类页面路径，需确保其正确性） -->
-                  <%= category.name %>
-              </button>
-          </h2>
-          <div id="collapse<%= category.name %>" class="accordion-collapse collapse" aria-labelledby="heading<%= category.name %>" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                  <ol class="article-list-under-category">
-                    <a href="/<%- category.path %>" class="btn btn-dark">前往分类页面</a>
-                    <hr>
-                      <!-- 遍历当前分类下的每篇文章，生成文章列表项 -->
-                      <% category.posts.forEach(function(post) { %>
-                      <li class="article-list-item">
-                          <a href="/<%- post.path %>"><%= post.title %></a>
-                      </li>
-                      <% }); %>
-                    </ol>
-              </div>
-          </div>
-      </div>
-      <% }); %>
-  </div>
-  <% } %>
+    <!-- 文章头部区域，展示文章标题以及分类数量 -->
+    <header class="article-header">
+            <h1 class="article-title" itemprop="name"><%= page.title %></h1>
+            <!-- 显示分类的总数 -->
+            <h3><%= __('page.total_category', site.categories.length) %></h3>
+    </header>
+    <br>
+    <!-- 如果存在分类信息，则开始构建分类的折叠面板（Accordion） -->
+    <% if (site.categories.length) { %>
+    <div class="accordion" id="accordionExample">
+            <!-- 遍历每个分类，构建对应的Accordion项 -->
+            <% site.categories.sort((a, b) => a.name.localeCompare(b.name)).forEach(function(category) { %>
+            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading<%= category.name %>">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= category.name %>" aria-expanded="<%= category.collapsed ? 'false' : 'true' %>" aria-controls="collapse<%= category.name %>">
+                                    <!-- 分类名称作为按钮文本，同时添加点击可跳转到对应分类页面的链接（假设item.path是分类页面路径，需确保其正确性） -->
+                                    <%= category.name %>
+                            </button>
+                            
+                    </h2>
+                   
+                    <div id="collapse<%= category.name %>" class="accordion-collapse collapse" aria-labelledby="heading<%= category.name %>" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                    <a href="/<%- category.path %>" class="btn btn-dark"><%= __('page.goto_category') %></a>
+                                    <hr>
+                                    <ol class="article-list-under-category">
+                                            <% category.posts.forEach(function(post) { %>
+                                            <!-- 遍历当前分类下的每篇文章，生成文章列表项 -->
+                                            <li class="article-list-item">
+                                                    <a href="/<%- post.path %>"><%= post.title %></a>
+                                            </li>
+                                            <% }); %>
+                                    </ol>
+                            </div>
+                    </div>
+            </div>
+            <% }); %>
+    </div>
+    <% } %>
 </article>
 

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="<%= page.lang || config.language %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= __('404.title') %></title>
+</head>
+<div style="display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; text-align: center; font-family: Arial, sans-serif;">
+    <div>
+        <h1 style="font-size: 80px;">404</h1>
+        <p style="font-size: 25px; padding: 5px;"><%= __('404.message') %></p>
+        <p><a href="javascript:history.back()""><%= __('404.back') %></a></p>
+    </div>
+</div>
+</html>

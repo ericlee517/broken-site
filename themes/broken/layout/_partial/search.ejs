@@ -1,0 +1,77 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<div class="container" style="margin-top: 8rem;">
+    <h1>Search</h1>
+    <form id="search-form" class="mb-3">
+        <div class="input-group">
+            <input type="text" id="search-input" class="form-control" placeholder="Enter search keyword">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+    <div id="search-results"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        function performSearch(keyword) {
+            if (!keyword) return;
+
+            $('#search-input').val(keyword);
+
+            $.ajax({
+                url: '/search.xml',
+                dataType: 'xml',
+                success: function(data) {
+                    const $results = $('#search-results');
+                    $results.empty();
+
+                    $(data).find('entry').each(function() {
+                        const $this = $(this);
+                        const title = $this.find('title').text();
+                        const link = $this.find('url').text();
+                        const category = $this.find('category').text();
+
+                        if (title.toLowerCase().includes(keyword)) {
+                            const resultItem = `
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="card-title">${title}</h3>
+                                        分类：<span class="badge rounded-pill bg-dark">${category}</span><br><br>
+                                        <a href="${link}" class="btn btn-primary">立即阅读</a>
+                                    </div>
+                                </div>
+                            `;
+                            $results.append(resultItem);
+                        }
+                    });
+
+                    if ($results.children().length === 0) {
+                        $results.append('<p style="margin-top:100px;margin-bottom:100px;text-align:center;font-size:20px;">No results found.<br>|*´Å`)ﾉ </p>');
+                    }
+                },
+                error: function() {
+                    $('#search-results').html('<p>Error loading search results.</p>');
+                }
+            });
+        }
+
+        $('#search-form').on('submit', function(e) {
+            e.preventDefault();
+            const keyword = $('#search-input').val().toLowerCase();
+            if (!keyword) return;
+
+            // Update the URL with the search parameter
+            const newUrl = new URL(window.location.href);
+            newUrl.searchParams.set('keyword', keyword);
+            window.history.pushState({ path: newUrl.href }, '', newUrl.href);
+
+            performSearch(keyword);
+        });
+
+        // Check if there's a search parameter in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchKeyword = urlParams.get('keyword');
+        if (searchKeyword) {
+            performSearch(searchKeyword.toLowerCase());
+        }
+    });
+</script>

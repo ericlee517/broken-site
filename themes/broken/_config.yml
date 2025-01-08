@@ -18,8 +18,18 @@ authors:
   Eric:
     name: Eric
     avatar_url: https://static.turboflint.cn/image/ericlee.png
-    bio: Hello, everyone! I'm the principal person in charge of the Broken Universe project and also the founder of Turbo Flint. In the future, I'll work even harder to create more and better works. 
-  Rebecca:
-    name: Rebecca
-    avatar_url: https://static.turboflint.cn/image/rebecca.jpg
-    bio: test_2
+    type: official
+    bio: BROKEN UNIVERSE CREATOR
+  BroKen_Photo:
+    name: BroKen_Photo
+    avatar_url: https://static.turboflint.cn/image/horizon.jpg
+    type: official
+    bio: 破碎宇宙官方作者
+  UNKNOW:
+    name: UNKNOW
+    avatar_url: https://static.turboflint.cn/image/user.svg
+    type: official
+    bio: 破碎宇宙内容发布BOT
+
+# System Config. Please Do Not Modify!
+version: 1.0.2

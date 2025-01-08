@@ -6,15 +6,64 @@ index:
   post: 所有文章
   team: 创作团队
 
+derivative_novel:
+  title: 衍生小说
+  subheading: 破碎宇宙衍生小说
+  content: 根据破碎宇宙所衍生出的小说，在每一个故事中感受来自破碎的魅力。
+  button: 立即阅读
+
+worldview:
+  title: 世界观
+  subheading: 破碎宇宙世界观内容
+  content: 破碎宇宙的所有世界观内容，分析其中的小细节和小故事。
+  button: 立即阅读
+
+post:
+  date: 发布时间
+  category: 分类
+  read: 阅读
+  see_more: 查看全部
+
 nav:
   home: 首页
+  search: 搜索
   category: 分类
   tag: 标签
   archive: 归档
   about: 关于
   menu: 快捷菜单
 
+menu:
+  wandering_nothingness: 流浪虚无
+  the_galaxy_killer: 银河杀手
+  the_second_one: 第二者
+  role_files: 人物档案
+
+author:
+  name: 作者
+  bio: 简介
+
+page:
+  category: 文章分类
+  total_category: 共计 %d 个分类
+  posts_category: 分类 %s 下的文章
+  posts_tag: 标签 %s 下的文章
+  goto_category: 前往分类页面
+  tag: 文章标签
+  total_tag: 共计 %d 个标签
+  goto_tag: 前往标签页面
+  archive: 文章归档
+  author: 本文作者
+  
+
 footer:
   about_us: 关于我们
+  about_content: 在破碎之中或许还隐藏着虚无的影子。你看见祂了吗？如果你看见了，请要犹豫，立刻逃跑。否则你将会失去一切，在虚无的花言巧语下失去你所拥有的一切!
   link: 链接
+  wechat_public_image: 微信公众号二维码图片
   wechat_public: 关注微信公众号
+
+404:
+  title: 404 页面未找到
+  message: 哎呀！您要查找的页面不存在。|*'Å'）ノ
+  back: 返回上一页

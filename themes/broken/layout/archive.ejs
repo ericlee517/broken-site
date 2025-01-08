@@ -1,50 +1,23 @@
 <!--分类归档标签的展示页面 根据需求不同功能分开开发-->
-<%
-// 构建归档数据结构，用于存储按照年份、月份分类的文章数据
-const archiveData = {};
-site.posts.forEach(post => {
-    const year = post.date.format('YYYY');
-    const month = post.date.format('MM');
-    if (!archiveData[year]) {
-        archiveData[year] = {};
-    }
-    if (!archiveData[year][month]) {
-        archiveData[year][month] = [];
-    }
-    archiveData[year][month].push(post);
-});
-
-// 将所有归档文章整合到一个数组用于分页计算
-const allArchivePosts = [];
-for (let year in archiveData) {
-    for (let month in archiveData[year]) {
-        allArchivePosts.push(...archiveData[year][month]);
-    }
-}
-
-// 按照时间从新到旧排序
-allArchivePosts.sort((a, b) => {
-    const aDate = new Date(a.date);
-    const bDate = new Date(b.date);
-    return bDate - aDate;
-});
-%>
 
 <!--判断页面类型 输出页面标题-->
 <div class="container">
     <div class="meta">
         <% if (page.category) { %>
-            <h1 class="title<%= theme.capitalize_tags && is_tag()? ' text-capitalize' : '' %>" style="margin-top: 6rem;">分类 <%= page.category %> 下的文章</h1>
+            <h1 class="title<%= theme.capitalize_tags && is_tag()? ' text-capitalize' : '' %>" style="margin-top: 6rem;">
+                <%= __('page.posts_category', page.category) %>
+            </h1>
         <% } %>
         <% if (page.tag) { %>
-            <h1 class="title<%= theme.capitalize_tags && is_tag()? ' text-capitalize' : '' %>" style="margin-top: 6rem;">标签 <%= (theme.hashtag_prefix_before_tags? '#' : '') + page.tag %> 下的文章（努力开发中）
+            <h1 class="title<%= theme.capitalize_tags && is_tag()? ' text-capitalize' : '' %>" style="margin-top: 6rem;">
+                <%= __('page.posts_tag', page.tag) %>
+            </h1>
         <% } %>
         <br>
     </div>
     <div class="divider"></div>
 
     <!--分类页面部分-->
-
     <% if (page.category) { %>
         <%
         const categoryPosts = page.posts?.filter(post => post.categories.some(cat => cat.name === page.category)) || [];
@@ -61,17 +34,16 @@ allArchivePosts.sort((a, b) => {
             <div class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title"><%- post.title %></h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: left;">发布时间：<%- post.date.format('YYYY-MM-DD HH:mm:ss') %></h6>
+                    <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: left;"><%= __('post.date') %>：<%- date(post.date, 'YYYY-MM-DD HH:mm:ss') %></h6>
                     <p class="card-text"></p>
-                    <a href="/<%- post.path %>" class="btn btn-primary" style="text-align: left;">阅读</a>
+                    <a href="/<%- post.path %>" class="btn btn-primary" style="text-align: left;"><%= __('post.read') %></a>
                 </div>
             </div>
             <% }) %>
         </div>
         <%- partial('_partial/paginator') %>
 
-        <!--归档页面部分-->
-
+    <!--归档页面部分-->
     <% } else if (page.layout === 'archive') { %>
         <div class="accordion" id="accordionExample">
             <%
@@ -80,13 +52,14 @@ allArchivePosts.sort((a, b) => {
             const perPage = page.pagination && page.pagination.per_page || 10;
             const currentPage = page.current? parseInt(page.current, 10) : 1;
             const startIndex = (currentPage - 1) * perPage;
-            const endIndex = Math.min(startIndex + perPage, allArchivePosts.length);
-            const currentArchivePosts = allArchivePosts.slice(startIndex, endIndex);
+            const endIndex = Math.min(startIndex + perPage, site.posts.length);
+            const currentArchivePosts = site.posts.slice(startIndex, endIndex);
 
             const months = {};
             currentArchivePosts.forEach(post => {
-                const year = post.date.format('YYYY');
-                const month = post.date.format('MM');
+                const date = moment(post.date);
+                const year = date.format('YYYY');
+                const month = date.format('MM');
                 const monthYear = `${year}-${month}`;
                 if (!months[monthYear]) {
                     months[monthYear] = [];
@@ -96,8 +69,8 @@ allArchivePosts.sort((a, b) => {
 
             // 先获取所有月份组合并排序
             const sortedMonthYears = Object.keys(months).sort((a, b) => {
-                const aDate = new Date(a.split('-')[0], a.split('-')[1]);
-                const bDate = new Date(b.split('-')[0], b.split('-')[1]);
+                const aDate = new Date(a.split('-')[0], a.split('-')[1] - 1);
+                const bDate = new Date(b.split('-')[0], b.split('-')[1] - 1);
                 return bDate - aDate;
             });
 
@@ -129,13 +102,34 @@ allArchivePosts.sort((a, b) => {
                     </div>
                 </div>
             </div>
-            <%- partial('_partial/paginator') %>
             <% }); %>
-            <% } else if (page.layout === 'tag') { %>
-                <h1>页面还在努力开发中</h1>
-                <%- partial('_partial/paginator') %>
-                            <% }; %>
+        </div>
+        <%- partial('_partial/paginator') %>
 
-
-
-        
+    <!--标签页面部分-->
+    <% } else if (page.tag) { %>
+        <%
+        const tagPosts = page.posts?.filter(post => post.tags.some(tag => tag.name === page.tag)) || [];
+        const perPage = Math.min((page.pagination && page.pagination.per_page) || 10, tagPosts.length);
+        const currentPage = page.current? parseInt(page.current, 10) : 1;
+        const maxPage = Math.ceil(tagPosts.length / perPage);
+        const adjustedCurrentPage = Math.min(currentPage, maxPage);
+        const startIndex = (adjustedCurrentPage - 1) * perPage;
+        const endIndex = Math.min(startIndex + perPage, tagPosts.length);
+        const currentTagPosts = tagPosts.slice(startIndex, endIndex);
+        %>
+        <div class="post-list archives">
+            <% currentTagPosts.forEach(post => { %>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><%- post.title %></h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: left;">发布时间：<%- date(post.date, 'YYYY-MM-DD HH:mm:ss') %></h6>
+                    <p class="card-text"></p>
+                    <a href="/<%- post.path %>" class="btn btn-primary" style="text-align: left;">阅读</a>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        <%- partial('_partial/paginator') %>
+    <% } %>
+</div>
