@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     
     <meta name="viewport" content="width=device - width, initial - scale = 1.0, minimum - scale = 0.5, maximum - scale = 2.0, user - scalable = yes">
-    <title>分类：衍生小说 - 虚无之下，皆为毁灭 - 破碎宇宙项目官方网站</title>
+    <title>搜索 - 虚无之下，皆为毁灭 - 破碎宇宙项目官方网站</title>
     
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 
@@ -65,78 +65,93 @@
 </nav>
 
   <div class="main-content">
-    <!--分类归档标签的展示页面 根据需求不同功能分开开发-->
-
-<!--判断页面类型 输出页面标题-->
-<div class="container">
-    <div class="meta">
-        
-            <h1 class="title" style="margin-top: 6rem;">
-                分类 衍生小说 下的文章
-            </h1>
-        
-        
-        <br>
-    </div>
-    <div class="divider"></div>
-
-    <!--分类页面部分-->
     
-        
-        <div class="post-list archives">
-            
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">《流浪虚无：重影》发布定档</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: left;">发布时间：2024-12-12 00:00:00</h6>
-                    <p class="card-text"></p>
-                    <a href="/2024/12/12/wans_2/" class="btn btn-primary" style="text-align: left;">阅读</a>
-                </div>
-            </div>
-            
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">所有已发布的衍生小说</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: left;">发布时间：2024-11-19 17:30:00</h6>
-                    <p class="card-text"></p>
-                    <a href="/2024/11/19/all-novel/" class="btn btn-primary" style="text-align: left;">阅读</a>
-                </div>
-            </div>
-            
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">《银河杀手》发布定档</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: left;">发布时间：2024-11-09 00:00:00</h6>
-                    <p class="card-text"></p>
-                    <a href="/2024/11/09/killer/" class="btn btn-primary" style="text-align: left;">阅读</a>
-                </div>
-            </div>
-            
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">第二部破碎宇宙衍生小说《第二者》已正式发布！</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: left;">发布时间：2024-09-28 12:00:00</h6>
-                    <p class="card-text"></p>
-                    <a href="/2024/09/28/novel-ones/" class="btn btn-primary" style="text-align: left;">阅读</a>
-                </div>
-            </div>
-            
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">首部实验性衍生小说《流浪虚无》已正式发布！</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: left;">发布时间：2024-06-30 12:00:00</h6>
-                    <p class="card-text"></p>
-                    <a href="/2024/06/30/novel-wans/" class="btn btn-primary" style="text-align: left;">阅读</a>
-                </div>
-            </div>
-            
+
+
+
+
+
+
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<div class="container" style="margin-top: 8rem;">
+    <h1>Search</h1>
+    <form id="search-form" class="mb-3">
+        <div class="input-group">
+            <input type="text" id="search-input" class="form-control" placeholder="Enter search keyword">
+            <button type="submit" class="btn btn-primary">Search</button>
         </div>
-        
-
-
-    <!--归档页面部分-->
-    
+    </form>
+    <div id="search-results"></div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        function performSearch(keyword) {
+            if (!keyword) return;
+
+            $('#search-input').val(keyword);
+
+            $.ajax({
+                url: '/search.xml',
+                dataType: 'xml',
+                success: function(data) {
+                    const $results = $('#search-results');
+                    $results.empty();
+
+                    $(data).find('entry').each(function() {
+                        const $this = $(this);
+                        const title = $this.find('title').text();
+                        const link = $this.find('url').text();
+                        const category = $this.find('category').text();
+
+                        if (title.toLowerCase().includes(keyword)) {
+                            const resultItem = `
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="card-title">${title}</h3>
+                                        分类：<span class="badge rounded-pill bg-dark">${category}</span><br><br>
+                                        <a href="${link}" class="btn btn-primary">立即阅读</a>
+                                    </div>
+                                </div>
+                            `;
+                            $results.append(resultItem);
+                        }
+                    });
+
+                    if ($results.children().length === 0) {
+                        $results.append('<p style="margin-top:100px;margin-bottom:100px;text-align:center;font-size:20px;">No results found.<br>|*´Å`)ﾉ </p>');
+                    }
+                },
+                error: function() {
+                    $('#search-results').html('<p>Error loading search results.</p>');
+                }
+            });
+        }
+
+        $('#search-form').on('submit', function(e) {
+            e.preventDefault();
+            const keyword = $('#search-input').val().toLowerCase();
+            if (!keyword) return;
+
+            // Update the URL with the search parameter
+            const newUrl = new URL(window.location.href);
+            newUrl.searchParams.set('keyword', keyword);
+            window.history.pushState({ path: newUrl.href }, '', newUrl.href);
+
+            performSearch(keyword);
+        });
+
+        // Check if there's a search parameter in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchKeyword = urlParams.get('keyword');
+        if (searchKeyword) {
+            performSearch(searchKeyword.toLowerCase());
+        }
+    });
+</script>
+
   </div>
 
   

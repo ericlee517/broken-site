@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://broken.turboflint.cn/author_broken_photo/index.html</loc>
+    
+    <lastmod>2025-01-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/author_unknow/index.html</loc>
+    
+    <lastmod>2025-01-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2025/01/08/photo_1/</loc>
+    
+    <lastmod>2025-01-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/search/index.html</loc>
+    
+    <lastmod>2025-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/12/12/wans_2/</loc>
+    
+    <lastmod>2025-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://broken.turboflint.cn/404/index.html</loc>
     
     <lastmod>2025-01-04</lastmod>
@@ -14,15 +59,6 @@
     <loc>https://broken.turboflint.cn/2024/11/19/all-novel/</loc>
     
     <lastmod>2025-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://broken.turboflint.cn/2024/12/12/wans_2/</loc>
-    
-    <lastmod>2024-12-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -83,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://broken.turboflint.cn/author_eric/index.html</loc>
+    <loc>https://broken.turboflint.cn/tags/index.html</loc>
     
     <lastmod>2024-12-14</lastmod>
     
@@ -92,9 +128,9 @@
   </url>
   
   <url>
-    <loc>https://broken.turboflint.cn/tags/index.html</loc>
+    <loc>https://broken.turboflint.cn/author_eric/index.html</loc>
     
-    <lastmod>2024-11-19</lastmod>
+    <lastmod>2024-12-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -121,31 +157,45 @@
 
   <url>
     <loc>https://broken.turboflint.cn/</loc>
-    <lastmod>2025-01-04</lastmod>
+    <lastmod>2025-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
+  <url>
+    <loc>https://broken.turboflint.cn/tags/Photos/</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
+    <loc>https://broken.turboflint.cn/categories/%E7%AB%99%E7%82%B9%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://broken.turboflint.cn/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/</loc>
-    <lastmod>2025-01-04</lastmod>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/categories/%E6%A6%82%E5%BF%B5%E5%9B%BE%E7%89%87/</loc>
+    <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://broken.turboflint.cn/categories/%E6%A6%82%E5%BF%B5%E5%86%85%E5%AE%B9/</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://broken.turboflint.cn/categories/%E7%AB%99%E7%82%B9%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2025-01-04</lastmod>
+    <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
