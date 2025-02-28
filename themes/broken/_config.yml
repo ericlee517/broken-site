@@ -30,6 +30,11 @@ authors:
     avatar_url: https://static.turboflint.cn/image/user.svg
     type: official
     bio: 破碎宇宙内容发布BOT
+  Turbo_Flint:
+    name: Turbo_Flint
+    avatar_url: https://static.turboflint.cn/image/flint_logo.jpg
+    type: official
+    bio: 涡轮火石媒体发布
 
 # System Config. Please Do Not Modify!
-version: 1.0.2
+version: 1.0.3

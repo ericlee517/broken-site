@@ -183,3 +183,43 @@ video {
     max-width: 70%;
   }
 }
+
+/* v1.0.3 new style */
+.card {
+  border-radius: 8px;                 /* 边角圆滑 */
+  box-shadow: rgba(0,0,0,0) 0,0,0,0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;  /* 合并过渡效果 */
+}
+
+
+.card:hover {
+  transform: translateY(-4px);  /* 向上轻微浮动 */
+  box-shadow: rgba(0,0,0,1) 0px 2px 6px 0px;
+}
+
+.bg-blue {
+  background-color: #333333; /* 深蓝色导航栏 */
+  color: white; /* 导航栏文字为白色 */
+  padding: 15px 20px;
+}
+
+.btn{
+  border-radius: 5px; 
+}
+
+.dropdown-menu {
+  max-height: 0;                     
+  opacity: 0;                        
+  overflow: hidden;                   
+  transition: max-height 0.3s ease, opacity 0.3s ease;  
+  position: absolute;                 
+  z-index: 1000;                    
+  width: 100%;
+  border-radius: 8px;                        
+}
+
+
+.dropdown-menu.show {
+  max-height: 1000px;              
+  opacity: 1;                        
+}

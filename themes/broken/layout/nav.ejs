@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-dark fixed-top" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-blue fixed-top" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="<%- url_for('index') %>">∅ BroKen</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
           <a class="nav-link" href="<%- url_for('about') %>"><%= __('nav.about') %></a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><%= __('nav.menu') %></a>
+          <a class="nav-link dropdown-toggle" role="button" ><%= __('nav.menu') %></a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">流浪虚无</a>
             <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">第二者</a>
