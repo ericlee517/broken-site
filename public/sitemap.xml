@@ -2,6 +2,141 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://broken.turboflint.cn/all_archive/index.html</loc>
+    
+    <lastmod>2025-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2025/02/26/pub_20240226/</loc>
+    
+    <lastmod>2025-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/11/09/killer%20copy/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/11/09/killer%20copy%202/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/11/09/killer%20copy%203/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/11/09/killer%20copy%204/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/11/09/killer%20copy%205/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/11/09/killer%20copy%206/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/11/09/killer%20copy%207/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/11/09/killer%20copy%208/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/11/09/killer%20copy%209/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/11/09/killer%20copy%2010/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2024/11/09/killer%20copy%2011/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/2025/01/21/copyright/</loc>
+    
+    <lastmod>2025-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/author_turbo_flint/index.html</loc>
+    
+    <lastmod>2025-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://broken.turboflint.cn/author_broken_photo/index.html</loc>
     
     <lastmod>2025-01-08</lastmod>
@@ -38,15 +173,6 @@
   </url>
   
   <url>
-    <loc>https://broken.turboflint.cn/2024/12/12/wans_2/</loc>
-    
-    <lastmod>2025-01-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://broken.turboflint.cn/404/index.html</loc>
     
     <lastmod>2025-01-04</lastmod>
@@ -59,15 +185,6 @@
     <loc>https://broken.turboflint.cn/2024/11/19/all-novel/</loc>
     
     <lastmod>2025-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://broken.turboflint.cn/2024/12/27/log_241227/</loc>
-    
-    <lastmod>2024-12-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -157,7 +274,7 @@
 
   <url>
     <loc>https://broken.turboflint.cn/</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2025-06-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -165,7 +282,7 @@
   
   <url>
     <loc>https://broken.turboflint.cn/tags/Photos/</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -173,29 +290,29 @@
 
   
   <url>
-    <loc>https://broken.turboflint.cn/categories/%E7%AB%99%E7%82%B9%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2025-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://broken.turboflint.cn/categories/%E8%A1%8D%E7%94%9F%E5%B0%8F%E8%AF%B4/</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://broken.turboflint.cn/categories/%E6%A6%82%E5%BF%B5%E5%9B%BE%E7%89%87/</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://broken.turboflint.cn/categories/%E6%A6%82%E5%BF%B5%E5%86%85%E5%AE%B9/</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2025-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://broken.turboflint.cn/categories/%E5%AE%98%E6%96%B9%E5%85%AC%E5%91%8A/</loc>
+    <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

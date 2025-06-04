@@ -3,6 +3,7 @@ title: 首部实验性衍生小说《流浪虚无》已正式发布！
 categories:
   - 衍生小说
 date: 2024-06-30 12:00
+cover: https://static.turboflint.cn/image/wans_album_origin.png
 ---
 
 我曾信仰虚无，期待他能给我一些希望。可最后，他令我失望了。

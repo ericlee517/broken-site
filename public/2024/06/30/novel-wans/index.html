@@ -21,7 +21,7 @@
 
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-dark fixed-top" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-blue fixed-top" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/index">∅ BroKen</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,33 +30,36 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/index">首页
+          <a class="nav-link" href="/index">首页 <i class="bi bi-house"></i>
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/search">搜索</a>
+          <a class="nav-link" href="/search">搜索 <i class="bi bi-search"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/categories">分类</a>
+          <a class="nav-link" href="/categories">分类 <i class="bi bi-bookmark"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/tags">标签</a>
+          <a class="nav-link" href="/tags">标签 <i class="bi bi-tags"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/archive">归档</a>
+          <a class="nav-link" href="/archive">归档 <i class="bi bi-archive"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about">关于</a>
+          <a class="nav-link" target="_blank" rel="noopener" href="https://broken-novel-universe.fandom.com/zh/wiki/">维基 <i class="bi bi-wikipedia"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">关于 ∅</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">快捷菜单</a>
+          <a class="nav-link dropdown-toggle" role="button" >快捷菜单</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">流浪虚无</a>
-            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">第二者</a>
-            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">银河杀手</a>
+            <a class="dropdown-item" href="categories/流浪虚无/">流浪虚无</a>
+            <a class="dropdown-item" href="category/第二者">第二者</a>
+            <a class="dropdown-item" href="category/杀手查莉">杀手查莉</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">人物档案 <i class="bi bi-folder2-open"></i></a>
+            <a class="dropdown-item" target="_blank" rel="noopener" href="https://broken-novel-universe.fandom.com/zh/wiki/Category:角色">人物档案 <i class="bi bi-folder2-open"></i></a>
           </div>
         </li>
       </ul>
@@ -142,7 +145,7 @@
             &copy; <span id="current-year"></span>2025 Turbo Flint & Eric Lee.
             <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://broken.turboflint.cn">BroKen Universe Project</a> by <a rel="cc:attributionURL dct:creator noopener" property="cc:attributionName" target="_blank" href="https://turboflint.cn">Turbo Flint</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a><br>
                 Power By <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>.</p>
-                <span style="font-size: 14px;">theme version <a target="_blank" rel="noopener" href="https://docs.turboflint.cn/others/broken-update">1.0.2</a></span> 
+                <span style="font-size: 14px;">theme version <a target="_blank" rel="noopener" href="https://docs.turboflint.cn/others/broken-update">1.1.0</a></span> 
         </div>
     </div>
 </footer>
@@ -167,6 +170,9 @@
 
   
 <script src="/js/popper.min.js"></script>
+
+  
+<script src="/js/script.js"></script>
 
   
 <script src="/js/bootstrap.min.js"></script>

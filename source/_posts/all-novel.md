@@ -24,3 +24,13 @@ date: 2024-11-19 17:30
         <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3517284581697224706&scene=126&sessionid=1145766547#wechat_redirect" class="card-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">立即阅读 →</a>
   </div>
 </div>
+
+<div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
+  <div class="card-body">
+    <h4 class="card-title">杀手查莉</h4>
+    <span class="badge text-bg-success"><i class="bi bi-wechat"></i> 微信公众号 抢先发布</span> <span class="badge text-bg-primary">免费阅读</span>
+    <br>
+    <p class="card-text">湮灭还是存活？逃离家族的掌控，会遇到什么样的故事？</p>
+        <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3517284581697224706&scene=126&sessionid=1145766547#wechat_redirect" class="card-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">立即阅读 →</a>
+  </div>
+</div>

@@ -3,6 +3,7 @@ title: 第二部破碎宇宙衍生小说《第二者》已正式发布！
 categories:
   - 衍生小说
 date: 2024-09-28 12:00
+cover: https://static.turboflint.cn/image/the_second_one_cover.png
 ---
 爱情永远都不分性别，也不分距离，不分性格。想爱就去追求，就去勇敢地去相爱。
 《第二者》中不只是谈到了追求爱情，同时也讲到了如何找到自己的路，如何寻找那个真正属于自己的归属。

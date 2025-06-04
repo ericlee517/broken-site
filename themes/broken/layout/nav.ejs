@@ -7,33 +7,36 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="<%- url_for('index') %>"><%= __('nav.home') %>
+          <a class="nav-link" href="<%- url_for('index') %>"><%= __('nav.home') %> <i class="bi bi-house"></i>
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%- url_for('search') %>"><%= __('nav.search') %></a>
+          <a class="nav-link" href="<%- url_for('search') %>"><%= __('nav.search') %> <i class="bi bi-search"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%- url_for('categories') %>"><%= __('nav.category') %></a>
+          <a class="nav-link" href="<%- url_for('categories') %>"><%= __('nav.category') %> <i class="bi bi-bookmark"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%- url_for('tags') %>"><%= __('nav.tag') %></a>
+          <a class="nav-link" href="<%- url_for('tags') %>"><%= __('nav.tag') %> <i class="bi bi-tags"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%- url_for('archive') %>"><%= __('nav.archive') %></a>
+          <a class="nav-link" href="<%- url_for('archive') %>"><%= __('nav.archive') %> <i class="bi bi-archive"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%- url_for('about') %>"><%= __('nav.about') %></a>
+          <a class="nav-link" href="https://broken-novel-universe.fandom.com/zh/wiki/">维基 <i class="bi bi-wikipedia"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%- url_for('about') %>"><%= __('nav.about') %> ∅</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" role="button" ><%= __('nav.menu') %></a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">流浪虚无</a>
-            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">第二者</a>
-            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">银河杀手</a>
+            <a class="dropdown-item" href="categories/流浪虚无/">流浪虚无</a>
+            <a class="dropdown-item" href="category/第二者">第二者</a>
+            <a class="dropdown-item" href="category/杀手查莉">杀手查莉</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#no-deve">人物档案 <i class="bi bi-folder2-open"></i></a>
+            <a class="dropdown-item" href="https://broken-novel-universe.fandom.com/zh/wiki/Category:角色">人物档案 <i class="bi bi-folder2-open"></i></a>
           </div>
         </li>
       </ul>

@@ -1,10 +1,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <div class="container" style="margin-top: 8rem;">
-    <h1>Search</h1>
+    <h1>搜索</h1>
     <form id="search-form" class="mb-3">
         <div class="input-group">
-            <input type="text" id="search-input" class="form-control" placeholder="Enter search keyword">
-            <button type="submit" class="btn btn-primary">Search</button>
+            <input type="text" id="search-input" class="form-control" placeholder="输入关键词后回车搜索">
+            <button type="submit" class="btn btn-primary">搜索</button>
         </div>
     </form>
     <div id="search-results"></div>
@@ -45,7 +45,7 @@
                     });
 
                     if ($results.children().length === 0) {
-                        $results.append('<p style="margin-top:100px;margin-bottom:100px;text-align:center;font-size:20px;">No results found.<br>|*´Å`)ﾉ </p>');
+                        $results.append('<p style="margin-top:100px;margin-bottom:100px;text-align:center;font-size:20px;">没有你想要的内容<br>|*´Å`)ﾉ </p>');
                     }
                 },
                 error: function() {

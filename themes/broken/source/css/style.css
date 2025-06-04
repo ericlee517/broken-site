@@ -4,9 +4,9 @@
 
 html,
 body {
-  min-height: 100%;
+ /*min-height: 100%;*/
   display: flex; /* 容器为flex布局 */
-  flex-direction: column; /* 方向为纵向，保持正常的从上到下文档流 */
+  flex-direction: column; 
 }
 
 body {
@@ -104,6 +104,7 @@ video {
   margin-right: 5px;
   text-decoration: none;
   font-size: 0.85rem;
+  color: white;
 }
 
 .prev {
@@ -111,6 +112,7 @@ video {
   margin-right: 5px;
   text-decoration: none;
   font-size: 0.85rem;
+  color: white;
 }
 
 .extend {
@@ -197,6 +199,7 @@ video {
   box-shadow: rgba(0,0,0,1) 0px 2px 6px 0px;
 }
 
+
 .bg-blue {
   background-color: #333333; /* 深蓝色导航栏 */
   color: white; /* 导航栏文字为白色 */
@@ -222,4 +225,17 @@ video {
 .dropdown-menu.show {
   max-height: 1000px;              
   opacity: 1;                        
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+}
+
+.card-img-top {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
