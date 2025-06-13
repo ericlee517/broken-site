@@ -2,6 +2,7 @@
 title: 第二部破碎宇宙衍生小说《第二者》已正式发布！
 categories:
   - 衍生小说
+  - 第二者
 date: 2024-09-28 12:00
 cover: https://static.turboflint.cn/image/the_second_one_cover.png
 ---

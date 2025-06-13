@@ -1,15 +1,16 @@
-# v1.0.2 develop version  
+# v1.10 develop version  
 title: 虚无之下，皆为毁灭 - 破碎宇宙官方网站
 
 # Menu Config
 menus: 
-  主页: /
-  关于: /about
+  流浪虚无: categories/衍生小说/流浪虚无
+  第二者: categories/衍生小说/第二者
+  杀手查莉: categories/衍生小说/杀手查莉
 
 # Footer Link
 links:
   Turbo Flint: "https://turboflint.cn/"
-  Blog: "https://turboflint.cn/blog"
+  Blog: "https://turboflint.cn/posts"
   Github: "https://github.com/ericlee517"
   Copyright: "https://docs.turboflint.cn/others/broken-copyright"
 
@@ -36,5 +37,12 @@ authors:
     type: official
     bio: 涡轮火石新闻发布
 
+# 此部分请阅读文档：
+i18n: false
+basic-card: true
+all-articles: true
+animated: true
+team-members: true
+
 # System Config. Please Do Not Modify!
-version: 1.10_Release
+version: 1.11_Release

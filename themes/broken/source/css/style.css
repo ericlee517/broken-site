@@ -1,44 +1,33 @@
-* {
-  box-sizing: border-box;
-}
-
-html,
+/* 部分代码由Trae辅助生成 */
+/* html,
 body {
- /*min-height: 100%;*/
-  display: flex; /* 容器为flex布局 */
-  flex-direction: column; 
+  
 }
+ */
 
-body {
+/* v1.11 修改Footer相关。 */
+.wrap {
   display: flex;
   flex-direction: column;
+  min-height: 60vh;
 }
-
-/* 主要内容容器，设置为自动伸展并处理滚动条 */
 .main-content {
   flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  position: relative; /* 添加相对定位，为 footer 的绝对定位提供参考 */
 }
 
 footer {
-  margin-top: auto;
-}
-
-.main-content {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-}
-
-/* 视频背景容器样式 */
-.video-bg {
   position: relative;
   width: 100%;
-  /* 设置一个固定高度，你可以根据实际需求调整这个数值，这里假设为屏幕高度的50%，避免它无限延伸遮挡后续内容 */
+  height: 2.5rem; 
+}
+
+/* v1.11 不再支持视频类型 */
+.hero-bg {
+  position: relative;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
+  background-image: url(../image/ocean.png)
 }
 
 .card {
@@ -46,7 +35,7 @@ footer {
   margin-right: 15px; /* 根据实际需求调整右边距数值 */
 }
 
-/* 视频样式 */
+/* v1.11 Update */
 video {
   position: absolute;
   top: 0;
@@ -58,13 +47,13 @@ video {
 }
 
 /* 遮罩层样式 */
-.video-mask {
+.hero-mask {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.55);
   z-index: 0;
 }
 
@@ -80,16 +69,68 @@ video {
   z-index: 1;
 }
 
-/* 后续内容容器样式，添加一些间距让其与视频背景部分区分开，这里以 margin-top 为例，可按需调整 */
-.main-content {
-  margin-top: 40px;
+/* 分割线 来源：https://segmentfault.com/a/1190000021327814 */
+.auto-divider {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #acacac;
+  font-size: 1rem;
 }
 
-/* 整体分页容器样式 */
-/* 整体分页容器样式 */
+.auto-divider::before,
+.auto-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #505050;
+}
+
+.auto-divider::before {
+  margin-right: 10px;
+}
+
+/* 修正拼写错误，将 tauto-divider 改为 auto-divider */
+.auto-divider::after {
+  margin-left: 10px;
+}
+/* v1.10 Up-Down Icon */
+/* 定义上下浮动的动画 */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0); 
+    -moz-transform: translateY(0); 
+    -ms-transform: translateY(0); 
+    -o-transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(-12px); 
+    -webkit-transform: translateY(-12px);
+    -moz-transform: translateY(-12px);
+    -ms-transform: translateY(-12px);
+    -o-transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+.up-down-icon {
+  animation: float 1.5s ease-in-out infinite;
+  -webkit-animation: float 1.5s ease-in-out infinite; 
+  -moz-animation: float 1.5s ease-in-out infinite; 
+  -ms-animation: float 1.5s ease-in-out infinite;
+  -o-animation: float 1.5s ease-in-out infinite;
+}
+
 .pagination-wrapper {
   text-align: center; /* 让分页内容在页面中居中显示 */
-  margin-top: 20px; /* 距离上方元素的间距，可以根据实际调整 */
+  margin-top: 20px;
 }
 
 .page-number {
@@ -113,6 +154,12 @@ video {
   text-decoration: none;
   font-size: 0.85rem;
   color: white;
+}
+
+.team-members-card{
+  height: 400px; 
+  overflow: auto;
+  margin-bottom: 20px;
 }
 
 .extend {
@@ -161,11 +208,11 @@ video {
 
 /* 图片样式 */
 .post_img img {
-    max-width: 40%;
-    height: auto;
-    display: block;
-    margin: 0 auto; 
-    object-fit: contain; 
+  max-width: 40%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 @media (max-width: 992px) {
@@ -188,17 +235,15 @@ video {
 
 /* v1.0.3 new style */
 .card {
-  border-radius: 8px;                 /* 边角圆滑 */
-  box-shadow: rgba(0,0,0,0) 0,0,0,0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;  /* 合并过渡效果 */
+  border-radius: 8px; /* 边角圆滑 */
+  box-shadow: rgba(0, 0, 0, 0) 0, 0, 0, 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; /* 合并过渡效果 */
 }
-
 
 .card:hover {
-  transform: translateY(-4px);  /* 向上轻微浮动 */
-  box-shadow: rgba(0,0,0,1) 0px 2px 6px 0px;
+  transform: translateY(-4px); /* 向上轻微浮动 */
+  box-shadow: rgba(0, 0, 0, 1) 0px 2px 6px 0px;
 }
-
 
 .bg-blue {
   background-color: #333333; /* 深蓝色导航栏 */
@@ -206,25 +251,24 @@ video {
   padding: 15px 20px;
 }
 
-.btn{
-  border-radius: 5px; 
+.btn {
+  border-radius: 5px;
 }
 
 .dropdown-menu {
-  max-height: 0;                     
-  opacity: 0;                        
-  overflow: hidden;                   
-  transition: max-height 0.3s ease, opacity 0.3s ease;  
-  position: absolute;                 
-  z-index: 1000;                    
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  position: absolute;
+  z-index: 1000;
   width: 100%;
-  border-radius: 8px;                        
+  border-radius: 8px;
 }
 
-
 .dropdown-menu.show {
-  max-height: 1000px;              
-  opacity: 1;                        
+  max-height: 1000px;
+  opacity: 1;
 }
 
 .card-title {
@@ -238,4 +282,17 @@ video {
 .card-img-top {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  height: 100%;
+}
+
+/* v1.11 对于链接样式的优化 参考了Google在暗色模式下的链接样式 */
+.link {
+  text-decoration: none;
+  color: rgb(140, 168, 255);
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  color: #9cc2ff; /* 更亮的蓝色 */
+  text-decoration: underline;
 }

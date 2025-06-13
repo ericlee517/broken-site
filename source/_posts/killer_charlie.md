@@ -2,6 +2,7 @@
 title: 《杀手查莉》今日发布，继续逃离，寻找自我。
 categories:
   - 衍生小说
+  - 杀手查莉
 date: 2025-05-31
 author: Turbo_Flint
 cover: https://static.turboflint.cn/image/killer_charlie.png

@@ -12,7 +12,7 @@
               <% }); %>
             </p>
         <br>
-          <div class="article-content post_img" style="font-size: 1rem;">
+          <div class="article-content post_img" style="font-size: 1.25rem;">
             <%- page.content %>  
         </div>
         &nbsp;
@@ -43,4 +43,10 @@
           </a> 
 </article>
 <br>
-<hr class="divider">
+<span class="auto-divider">更多文章</span>
+<% let latestPosts = site.posts.sort('-date').slice(0, 3); %>
+<ul class="list-unstyled container" style="margin-top: 10px;">
+  <% latestPosts.forEach(function(post) { %>
+    <li class="mb-4"><h5><a href="../../../../<%- post.path %>"><%- post.title %></a></h5></li>
+  <% }); %>
+</ul>

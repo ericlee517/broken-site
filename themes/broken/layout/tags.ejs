@@ -26,7 +26,7 @@
                         <!-- 遍历当前标签下的每篇文章，生成文章列表项 -->
                         <% tag.posts.forEach(function(post) { %>
                         <li class="article-list-item">
-                            <a href="/<%- post.path %>"><%= post.title %></a>
+                            <a href="/<%- post.path %>" class="link"><%= post.title %></a>
                         </li>
                         <% }); %>
                       </ol>

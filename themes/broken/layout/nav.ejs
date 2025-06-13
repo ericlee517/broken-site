@@ -27,16 +27,22 @@
           <a class="nav-link" href="https://broken-novel-universe.fandom.com/zh/wiki/">维基 <i class="bi bi-wikipedia"></i></a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="https://turboflint.cn/2025/06/13/broken_submit_a_contribution/">投稿 <i class="bi bi-send"></i></a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="<%- url_for('about') %>"><%= __('nav.about') %> ∅</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" role="button" ><%= __('nav.menu') %></a>
+          <a class="nav-link dropdown-toggle" role="button" >更多内容</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="categories/流浪虚无/">流浪虚无</a>
-            <a class="dropdown-item" href="category/第二者">第二者</a>
-            <a class="dropdown-item" href="category/杀手查莉">杀手查莉</a>
+<% if (theme.menus) { %>
+  <% for (var menuText in theme.menus) { %>
+    <a class="dropdown-item" href="<%- url_for(theme.menus[menuText]) %>"><%= menuText %></a>
+  <% } %>
+<% } %>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="https://broken-novel-universe.fandom.com/zh/wiki/Category:角色">人物档案 <i class="bi bi-folder2-open"></i></a>
+            <a class="dropdown-item" href="https://broken-novel-universe.fandom.com/zh/wiki/Category:小说">小说档案 <i class="bi bi-book"></i></a>
           </div>
         </li>
       </ul>

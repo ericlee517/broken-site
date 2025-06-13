@@ -1,13 +1,9 @@
-<div class="container-fluid video-bg">
-    <div class="video-mask"></div>
-    <video autoplay muted loop playsinline>
-        <source src="videos/broken-1080p.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+<div class="container-fluid hero-bg">
+    <div class="hero-mask"></div>
     <div class="text-overlay">
         <h1 class="animate__animated animate__fadeInUp" style="font-size: 3rem">∅<br><%= __('index.title') %></h1>
-        <p  class="animate__animated animate__fadeInUp"><%= __('index.sm_title') %><br>↓</p>
-            
+        <p class="animate__animated animate__fadeInUp"><%= __('index.sm_title') %></p>
+       <p class="up-down-icon"><i class="bi bi-arrow-down"></i></p> 
     </div>
 </div>
 
@@ -32,6 +28,17 @@
       <h5 class="card-title"><%= __('worldview.subheading') %></h5>
       <p class="card-text"><%= __('worldview.content') %></p>
       <a href="/2024/10/28/the-broken-world/" class="btn btn-primary"><%= __('worldview.button') %></a>
+    </div>
+  </div>
+<br>
+  <div class="card">
+    <div class="card-header">
+      投稿
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">向我们投稿</h5>
+      <p class="card-text">破碎宇宙是一个巨大的小说宇宙，无论你的想法多么伟大，我们都能在参考后接受你的想法。所以，无论你的想法有多么伟大，欢迎向我们投稿！</p>
+      <a href="#" class="btn btn-primary">立即投稿</a>
     </div>
   </div>
   <br>
@@ -127,13 +134,34 @@
       <br>
       <h2><%= __('index.team') %></h2>
       <br>
-          <div class="card text-center">
-            <center class="mt-3">
-            <img src="https://static.turboflint.cn/image/wild_tree.jpg" class="card-img-top rounded-circle" alt="Avatar 1" style="width: 150px;">
-        </center>
-            <div class="card-body">
-              <h5 class="card-title">李野树</h5>
-              <p class="card-text">破碎宇宙项目主要创作者，破碎宇宙的开创者之一，“New Land”联合创始人之一。曾创作出《第二者》，同时也为破碎宇宙的基本概念做出巨大的贡献。</p>
-        </div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card text-center team-members-card">
+      <div class="mt-3">
+        <img src="https://static.turboflint.cn/image/wild_tree.jpg" class="card-img-top rounded-circle" alt="Avatar 1" style="width: 150px;">
       </div>
+      <div class="card-body">
+        <h5 class="card-title">李野树</h5>
+        <p class="card-text">破碎小说宇宙项目主要创作者，破碎宇宙的开创者之一，“New Land”联合创始人之一。曾创作出《流浪虚无》等作品.</p>
+        <div>
+        <a class="btn btn-dark" href="https://weibo.com/u/7959590855" target="_blank"><i class="bi bi-sina-weibo"></i> 微博</a>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card text-center team-members-card">
+      <div class="mt-3">
+        <img src="https://static.turboflint.cn/image/rebecca.jpg" class="card-img-top rounded-circle" alt="Avatar 1" style="width: 150px;">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Rebecca</h5>
+        <p class="card-text">破碎小说宇宙的创作者之一，提供小说宇宙咨询服务，协助创作了《第二者》等作品。</p>
+        <div>
+            <a class="btn btn-dark" href="https://weibo.com/u/5620100755" target="_blank"><i class="bi bi-sina-weibo"></i> 微博</a>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
   </div>

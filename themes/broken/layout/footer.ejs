@@ -1,6 +1,4 @@
-
-<footer class="bg-primary text-white py-4" style="margin-top: 50px;">
-
+<footer class="py-4" style="margin-top: 50px;">
     <div class="container">
         <div class="row">
             <div class="col-md-4 mb-3">
@@ -11,16 +9,14 @@
                 <h5><%= __('footer.link') %></h5>
                 <ul class="list-unstyled">
                   <% Object.entries(theme.links).forEach(([linkName, linkUrl]) => { %>
-                    <li><a href="<%= linkUrl %>" class="text-white"><%= linkName %></a></li>
+                    <li><a href="<%= linkUrl %>" class="link"><%= linkName %></a></li>
                   <% }); %>
                 </ul>
               </div>
-
             <div class="col-md-4 mb-3">
                 <h5><%= __('footer.wechat_public') %></h5>
                 <img src="https://static.turboflint.cn/image/wechat-qrcode.png" alt="微信公众号关注二维码" style="width: 330px;">
             </div>
-           
         </div>
         <hr class="my-3">
         <div class="text-center">
@@ -31,21 +27,3 @@
         </div>
     </div>
 </footer>
-
-<div class="modal fade " id="no-deve" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">提示</h1>
-        </div>
-        <div class="modal-body">
-          该功能还在努力开发中~开发组时间有限，正在努力啦！
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-

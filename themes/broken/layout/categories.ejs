@@ -14,7 +14,6 @@
             <div class="accordion-item">
                     <h2 class="accordion-header" id="heading<%= category.name %>">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= category.name %>" aria-expanded="<%= category.collapsed ? 'false' : 'true' %>" aria-controls="collapse<%= category.name %>">
-                                    <!-- 分类名称作为按钮文本，同时添加点击可跳转到对应分类页面的链接（假设item.path是分类页面路径，需确保其正确性） -->
                                     <%= category.name %>
                             </button>
                             
@@ -28,7 +27,7 @@
                                             <% category.posts.forEach(function(post) { %>
                                             <!-- 遍历当前分类下的每篇文章，生成文章列表项 -->
                                             <li class="article-list-item">
-                                                    <a href="/<%- post.path %>"><%= post.title %></a>
+                                                    <a href="/<%- post.path %>" class="link"><%= post.title %></a>
                                             </li>
                                             <% }); %>
                                     </ol>

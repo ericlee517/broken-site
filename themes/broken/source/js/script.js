@@ -30,3 +30,10 @@
       }
     });
   });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const articleLinks = document.querySelectorAll('.article-content a');
+    articleLinks.forEach(link => {
+        link.classList.add('link');
+    });
+});
